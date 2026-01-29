@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drone Agricole Intelligent | Moctar Hassane</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;500;600&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --primary-color: #00ff9d;
+            --secondary-color: #0088ff;
+            --accent-color: #ff00ff;
+            --dark-bg: #0a0a14;
+            --card-bg: rgba(20, 25, 45, 0.9);
+            --text-color: #e0f0ff;
+        }
+        body {
+            font-family: 'Exo 2', sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        header { position: fixed; top: 0; width: 100%; z-index: 1000; background-color: rgba(10, 10, 20, 0.9); padding: 1rem; border-bottom: 1px solid rgba(0, 255, 157, 0.3); }
+        header a { color: var(--primary-color); text-decoration: none; font-weight: bold; display: flex; align-items: center; gap: 0.5rem; }
+        .container { max-width: 1200px; margin: 100px auto; padding: 2rem; }
+        h1 { font-family: 'Orbitron', sans-serif; font-size: 3rem; margin-bottom: 1rem; background: linear-gradient(90deg, var(--primary-color), var(--secondary-color)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+        h2 { color: var(--primary-color); margin-top: 2rem; margin-bottom: 1rem; }
+        .project-hero { background: linear-gradient(135deg, rgba(0,255,157,0.1), rgba(0,136,255,0.1)); padding: 2rem; border-radius: 12px; border: 1px solid rgba(0,255,157,0.2); margin-bottom: 2rem; }
+        .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin: 2rem 0; }
+        .gallery img { width: 100%; height: 200px; object-fit: cover; border-radius: 8px; cursor: pointer; transition: transform 0.3s; }
+        .gallery img:hover { transform: scale(1.05); }
+        .specs { background: var(--card-bg); padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--primary-color); margin: 2rem 0; }
+        .specs ul { margin-left: 1.5rem; }
+        .specs li { margin: 0.5rem 0; }
+        .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin: 2rem 0; }
+        .feature { background: rgba(0,255,157,0.05); padding: 1.5rem; border-radius: 8px; border: 1px solid rgba(0,255,157,0.2); }
+        .feature i { color: var(--primary-color); font-size: 2rem; margin-bottom: 0.5rem; }
+        .feature h3 { color: var(--secondary-color); margin-bottom: 0.5rem; }
+        footer { background: rgba(10,10,20,0.8); padding: 2rem; text-align: center; margin-top: 4rem; border-top: 1px solid rgba(0,255,157,0.2); }
+        .btn { display: inline-block; padding: 1rem 2rem; background: linear-gradient(90deg, var(--primary-color), var(--secondary-color)); color: var(--dark-bg); border: none; border-radius: 4px; cursor: pointer; text-decoration: none; font-weight: bold; transition: all 0.3s; }
+        .btn:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(0,255,157,0.5); }
+        @media (max-width: 768px) { h1 { font-size: 2rem; } .container { margin-top: 80px; padding: 1rem; } }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="maamportfolio.html"><i class="fas fa-arrow-left"></i> Retour au Portfolio</a>
+    </header>
+
+    <div class="container">
+        <h1>🚁 Drone Agricole Intelligent</h1>
+        
+        <div class="project-hero">
+            <p><strong>Drone autonome pour agriculture de précision</strong> avec cartographie de parcelles, pulvérisation intelligente et gestion des obstacles.</p>
+            <p style="margin-top: 1rem;"><strong>Statut :</strong> <span style="color: var(--accent-color);">🔄 En développement</span></p>
+        </div>
+
+        <h2>📸 Galerie du Projet</h2>
+        <div class="gallery">
+            <img src="Images/bar.png" alt="Drone en vol">
+            <img src="Images/bar.png" alt="Cartographie">
+            <img src="Images/bar.png" alt="Système de pulvérisation">
+            <img src="Images/bar.png" alt="Station de contrôle">
+        </div>
+
+        <h2>🎯 Objectifs du Projet</h2>
+        <ul style="margin-left: 1.5rem; line-height: 2;">
+            <li>✓ Développer un drone autonome low-cost pour petits exploitants</li>
+            <li>✓ Implémenter la cartographie par GPS + capteurs visuels</li>
+            <li>✓ Créer un système de pulvérisation précis et adaptatif</li>
+            <li>✓ Développer un logiciel de planification de missions</li>
+            <li>✓ Tester en conditions réelles agricoles</li>
+        </ul>
+
+        <h2>⚙️ Spécifications Techniques</h2>
+        <div class="specs">
+            <ul>
+                <li><strong>Plateforme :</strong> Quadricoptère personnalisé (600mm)</li>
+                <li><strong>Contrôleur :</strong> Pixhawk 4 + ArduPilot</li>
+                <li><strong>Capteurs :</strong> GPS RTK, caméra RGB, capteur multispectral</li>
+                <li><strong>Système de pulvérisation :</strong> Pompe électrique + buses intelligentes</li>
+                <li><strong>Autonomie :</strong> 30-45 minutes en vol</li>
+                <li><strong>Portée :</strong> 5km avec télémétrie</li>
+                <li><strong>Charge utile :</strong> 2-3 litres de produit</li>
+                <li><strong>Logiciel :</strong> Python + Mission Planner + App mobile</li>
+            </ul>
+        </div>
+
+        <h2>✨ Caractéristiques Principales</h2>
+        <div class="features">
+            <div class="feature">
+                <i class="fas fa-map"></i>
+                <h3>Cartographie Précise</h3>
+                <p>GPS RTK pour localisation centimétrique</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-crosshairs"></i>
+                <h3>Pulvérisation Intelligente</h3>
+                <p>Dosage adaptatif selon les besoins</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-robot"></i>
+                <h3>Autonomie Totale</h3>
+                <p>Missions automatiques planifiées</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-bar-chart"></i>
+                <h3>Analyse de Données</h3>
+                <p>Santé des cultures en temps réel</p>
+            </div>
+        </div>
+
+        <h2>🌾 Application Agricole</h2>
+        <div class="specs">
+            <p><strong>Cultures ciblées :</strong> Riz, maïs, tomates, oignons</p>
+            <p><strong>Opérations :</strong> Pulvérisation, épandage engrais, surveillance</p>
+            <p><strong>Gain de temps :</strong> 10x plus rapide qu'épandage manuel</p>
+            <p><strong>Réduction produits :</strong> -30% consommation grâce à la précision</p>
+        </div>
+
+        <h2>💡 Innovations Techniques</h2>
+        <ul style="margin-left: 1.5rem; line-height: 2;">
+            <li>Système de détection obstacle par caméra et lidar</li>
+            <li>Algorithme d'optimisation de trajectoire</li>
+            <li>Retour visuel en temps réel (FPV)</li>
+            <li>Sauvegarde automatique et reprise de mission</li>
+        </ul>
+
+        <div style="text-align: center; margin: 3rem 0;">
+            <a href="maamportfolio.html#projects" class="btn">← Voir d'autres projets</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Sawadogo Moctar Hassane | MHTech Portfolio</p>
+    </footer>
+</body>
+</html>

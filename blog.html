@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog & Actualités | Moctar Hassane</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;500;600&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --primary-color: #00ff9d;
+            --secondary-color: #0088ff;
+            --accent-color: #ff00ff;
+            --dark-bg: #0a0a14;
+            --card-bg: rgba(20, 25, 45, 0.9);
+            --text-color: #e0f0ff;
+        }
+        body {
+            font-family: 'Exo 2', sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        header { position: fixed; top: 0; width: 100%; z-index: 1000; background-color: rgba(10, 10, 20, 0.9); padding: 1rem; border-bottom: 1px solid rgba(0, 255, 157, 0.3); }
+        header a { color: var(--primary-color); text-decoration: none; font-weight: bold; display: flex; align-items: center; gap: 0.5rem; }
+        .container { max-width: 1000px; margin: 100px auto; padding: 2rem; }
+        h1 { font-family: 'Orbitron', sans-serif; font-size: 3rem; margin-bottom: 1rem; background: linear-gradient(90deg, var(--primary-color), var(--secondary-color)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+        .blog-post {
+            background: var(--card-bg);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 12px;
+            border-left: 4px solid var(--primary-color);
+            transition: all 0.3s;
+        }
+        .blog-post:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,255,157,0.2); }
+        .blog-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .blog-header h2 { margin: 0; color: var(--primary-color); }
+        .blog-date {
+            font-size: 0.9rem;
+            color: var(--secondary-color);
+            font-family: 'Share Tech Mono', monospace;
+        }
+        .blog-content { margin: 1rem 0; line-height: 1.8; }
+        .blog-tags {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+        .tag {
+            background: rgba(0,255,157,0.1);
+            color: var(--primary-color);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            border: 1px solid rgba(0,255,157,0.3);
+        }
+        .read-more {
+            color: var(--secondary-color);
+            cursor: pointer;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        footer { background: rgba(10,10,20,0.8); padding: 2rem; text-align: center; margin-top: 4rem; border-top: 1px solid rgba(0,255,157,0.2); }
+        .btn { display: inline-block; padding: 1rem 2rem; background: linear-gradient(90deg, var(--primary-color), var(--secondary-color)); color: var(--dark-bg); border: none; border-radius: 4px; cursor: pointer; text-decoration: none; font-weight: bold; transition: all 0.3s; }
+        @media (max-width: 768px) { h1 { font-size: 2rem; } .container { margin-top: 80px; padding: 1rem; } }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="maamportfolio.html"><i class="fas fa-arrow-left"></i> Retour au Portfolio</a>
+    </header>
+
+    <div class="container">
+        <h1>📝 Blog & Actualités</h1>
+        <p style="font-size: 1.2rem; margin-bottom: 2rem; color: var(--secondary-color);">Mon parcours, mes expériences et mes découvertes technologiques</p>
+
+        <!-- Article 1 -->
+        <div class="blog-post">
+            <div class="blog-header">
+                <h2>Débuter avec Arduino : Mon Premier Projet</h2>
+                <span class="blog-date">📅 15 Jan 2026</span>
+            </div>
+            <div class="blog-content">
+                <p>Quand j'ai commencé l'électronique, Arduino a été ma première plateforme. Je me souviens de l'excitation de voir une LED s'allumer pour la première fois grâce à mon code. C'était magique ! Dans cet article, je partage les étapes pour débuter avec Arduino et quelques conseils que j'aurais aimé connaître au début.</p>
+                <p style="margin-top: 1rem;">Les microcontrôleurs sont des outils incroyables pour les projets IoT. Si tu veux apprendre, je te recommande de commencer simple avec des LEDs et des boutons, puis progresser vers les capteurs.</p>
+            </div>
+            <div class="blog-tags">
+                <span class="tag">Arduino</span>
+                <span class="tag">Électronique</span>
+                <span class="tag">Tutoriel</span>
+                <span class="tag">Débutant</span>
+            </div>
+        </div>
+
+        <!-- Article 2 -->
+        <div class="blog-post">
+            <div class="blog-header">
+                <h2>Python pour l'Embarqué : Pourquoi j'aime Kivy</h2>
+                <span class="blog-date">📅 10 Jan 2026</span>
+            </div>
+            <div class="blog-content">
+                <p>Python n'est pas qu'un langage de data science ! J'ai découvert Kivy, un framework fantastique pour créer des interfaces mobiles et desktop. C'est ce que j'utilise pour contrôler mes projets IoT. La courbe d'apprentissage est douce et les résultats sont impressionnants.</p>
+                <p style="margin-top: 1rem;">Ce qui m'attire chez Kivy, c'est la simplicité et la puissance combinées. En quelques lignes de code, tu peux créer une application multiplateforme. C'est parfait pour les projets d'électronique embarquée.</p>
+            </div>
+            <div class="blog-tags">
+                <span class="tag">Python</span>
+                <span class="tag">Kivy</span>
+                <span class="tag">UI/UX</span>
+                <span class="tag">Développement</span>
+            </div>
+        </div>
+
+        <!-- Article 3 -->
+        <div class="blog-post">
+            <div class="blog-header">
+                <h2>L'Internet des Objets au Burkina Faso : Opportunités et Défis</h2>
+                <span class="blog-date">📅 05 Jan 2026</span>
+            </div>
+            <div class="blog-content">
+                <p>En tant qu'étudiant au Burkina Faso, je vois les énormes potentiels de l'IoT pour l'agriculture. Nos paysans ont besoin de solutions simples, efficaces et abordables. Les drones agricoles, la domotique intelligente et les capteurs connectés peuvent transformer notre façon de produire.</p>
+                <p style="margin-top: 1rem;">Le défi principal ? Le coût des technologies et la formation. C'est pour ça que je veux fonder MHTech : créer des solutions technologiques adaptées à nos réalités. Des solutions made in Burkina, pour l'Afrique.</p>
+            </div>
+            <div class="blog-tags">
+                <span class="tag">IoT</span>
+                <span class="tag">Agriculture</span>
+                <span class="tag">Afrique</span>
+                <span class="tag">Innovation</span>
+            </div>
+        </div>
+
+        <!-- Article 4 -->
+        <div class="blog-post">
+            <div class="blog-header">
+                <h2>Comment j'ai Construit un Système Domotique pour 50 000 FCFA</h2>
+                <span class="blog-date">📅 01 Jan 2026</span>
+            </div>
+            <div class="blog-content">
+                <p>La domotique coûte cher ? Pas nécessairement ! Avec des composants low-cost et un peu de créativité, j'ai créé un système de maison intelligente pour moins de 50 000 FCFA. Voici comment...</p>
+                <p style="margin-top: 1rem;"><strong>Composants utilisés :</strong><br>
+                • ESP32 (~5 000 FCFA)<br>
+                • Relais électromagnétiques (~2 000 FCFA l'unité)<br>
+                • Capteurs de mouvement et température (~3 000 FCFA)<br>
+                • Câblage et boîtier (~15 000 FCFA)<br>
+                • Plus d'une vingtaine d'heures de développement gratuit !</p>
+            </div>
+            <div class="blog-tags">
+                <span class="tag">Domotique</span>
+                <span class="tag">DIY</span>
+                <span class="tag">Économique</span>
+                <span class="tag">ESP32</span>
+            </div>
+        </div>
+
+        <!-- Article 5 -->
+        <div class="blog-post">
+            <div class="blog-header">
+                <h2>Mon Parcours : De la Passion à l'Entrepreneuriat</h2>
+                <span class="blog-date">📅 25 Dec 2025</span>
+            </div>
+            <div class="blog-content">
+                <p>Depuis petit, j'ai toujours aimé démonter les choses pour comprendre comment elles fonctionnent. Mes parents pensaient que je gaspillais l'électricité ! Mais c'était mon chemin vers la passion pour l'électronique et l'informatique.</p>
+                <p style="margin-top: 1rem;">Aujourd'hui, en 3ème année d'études, je ne regrette rien. Chaque projet m'enseigne quelque chose de nouveau. Et mon rêve ultime ? Créer MHTech, une entreprise qui révolutionnera l'agriculture intelligente en Afrique. Un rêve ambitieux, mais je suis déterminé à le réaliser.</p>
+            </div>
+            <div class="blog-tags">
+                <span class="tag">Parcours</span>
+                <span class="tag">Passion</span>
+                <span class="tag">Entrepreneuriat</span>
+                <span class="tag">MHTech</span>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin: 3rem 0;">
+            <a href="maamportfolio.html" class="btn">← Retour au Portfolio</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Sawadogo Moctar Hassane | MHTech Portfolio</p>
+    </footer>
+</body>
+</html>
