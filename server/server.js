@@ -65,7 +65,7 @@ if (!GEMINI_API_KEY) {
     process.exit(1);
 }
 
-// Route racine - Sert maamportfolio.html
+// Route racine - Sert la page d'accueil publique.
 app.get('/', (req, res) => {
     res.sendFile(path.join(publicDirectory, 'index.html'));
 });

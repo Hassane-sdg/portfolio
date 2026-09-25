@@ -3,7 +3,6 @@
 
 User-agent: *
 Allow: /
-Disallow: /scripts/
 Disallow: /optimization-guide.html
 
 # Google-specific
