@@ -2,18 +2,62 @@ require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const axios = require('axios');
+const path = require('path');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
+const ALLOWED_MODELS = new Set(['gemini-2.0-flash', 'gemini-1.5-pro', 'gemini-1.5-flash']);
+const allowedOrigins = new Set([
+    'http://localhost:3000',
+    'http://127.0.0.1:3000',
+    process.env.PUBLIC_ORIGIN
+].filter(Boolean));
+const requestBuckets = new Map();
+const RATE_LIMIT_WINDOW_MS = 60 * 1000;
+const RATE_LIMIT_MAX_REQUESTS = 10;
+const MAX_MESSAGE_LENGTH = 5000;
 
 // Middleware
 app.use(cors({
-    origin: ['http://localhost:3000', 'http://127.0.0.1:3000', 'http://localhost', 'file://'],
-    credentials: true
+    origin(origin, callback) {
+        if (!origin || allowedOrigins.has(origin)) {
+            return callback(null, true);
+        }
+        return callback(new Error('Origine non autorisée'));
+    },
+    credentials: false
 }));
-app.use(express.json());
-app.use(express.static('.')); // Sert les fichiers statiques
+app.use(express.json({ limit: '16kb' }));
+
+// Ne jamais exposer les secrets, le dépôt ou le code serveur via les fichiers statiques.
+app.use((req, res, next) => {
+    const blockedPath = /^\/(?:\.git|\.venv|node_modules)(?:\/|$)|^\/(?:\.env(?:\.|$)|server\.js$|package(?:-lock)?\.json$|\.htaccess$)/i.test(req.path);
+    if (blockedPath) {
+        return res.status(404).end();
+    }
+    return next();
+});
+const publicDirectory = path.join(__dirname, '..', 'public');
+app.use(express.static(publicDirectory, { dotfiles: 'deny', index: false }));
+
+function isRateLimited(clientKey) {
+    const now = Date.now();
+    const bucket = requestBuckets.get(clientKey);
+    if (!bucket || now - bucket.startedAt >= RATE_LIMIT_WINDOW_MS) {
+        requestBuckets.set(clientKey, { startedAt: now, count: 1 });
+        return false;
+    }
+    bucket.count += 1;
+    return bucket.count > RATE_LIMIT_MAX_REQUESTS;
+}
+
+setInterval(() => {
+    const cutoff = Date.now() - RATE_LIMIT_WINDOW_MS;
+    for (const [key, bucket] of requestBuckets) {
+        if (bucket.startedAt < cutoff) requestBuckets.delete(key);
+    }
+}, RATE_LIMIT_WINDOW_MS).unref();
 
 // Validation de la clé API au démarrage
 if (!GEMINI_API_KEY) {
@@ -23,7 +67,7 @@ if (!GEMINI_API_KEY) {
 
 // Route racine - Sert maamportfolio.html
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/maamportfolio.html');
+    res.sendFile(path.join(publicDirectory, 'index.html'));
 });
 
 // Endpoint de test
@@ -34,6 +78,11 @@ app.get('/health', (req, res) => {
 // Endpoint principal du chatbot
 app.post('/api/chat', async (req, res) => {
     try {
+        const clientKey = req.ip || req.socket.remoteAddress || 'unknown';
+        if (isRateLimited(clientKey)) {
+            return res.status(429).json({ error: 'Trop de requêtes. Réessayez dans une minute.' });
+        }
+
         const { message, model = 'gemini-2.0-flash' } = req.body;
 
         // Validation
@@ -45,8 +94,12 @@ app.post('/api/chat', async (req, res) => {
             return res.status(400).json({ error: 'Le message ne peut pas être vide' });
         }
 
-        if (message.trim().length > 5000) {
-            return res.status(400).json({ error: 'Message trop long (max 5000 caractères)' });
+        if (message.trim().length > MAX_MESSAGE_LENGTH) {
+            return res.status(400).json({ error: `Message trop long (max ${MAX_MESSAGE_LENGTH} caractères)` });
+        }
+
+        if (typeof model !== 'string' || !ALLOWED_MODELS.has(model)) {
+            return res.status(400).json({ error: 'Modèle non autorisé' });
         }
 
         // Context pour que Gemini comprenne le contexte du portfolio
@@ -57,7 +110,7 @@ Voici les informations à connaître:
 - Titre: Étudiant | Électronique & Informatique Industrielle
 - Email: contact@mhtech.bf
 - Téléphone: +226 76320088
-- GitHub: https://github.com/MHTechOfficial
+- GitHub: https://github.com/Hassane-sdg
 - LinkedIn: https://www.linkedin.com/in/moctar-hassane-sawadogo
 
 Compétences principales:
@@ -114,23 +167,14 @@ Réponds en français de manière professionnelle et amicale. Si quelqu'un te de
 
         // Gestion des erreurs spécifiques
         if (error.response?.status === 401) {
-            return res.status(401).json({ 
-                error: 'Clé API invalide ou expirée',
-                details: 'Vérifiez que GEMINI_API_KEY est correctement configurée'
-            });
+            return res.status(502).json({ error: 'Service IA temporairement indisponible' });
         }
 
         if (error.response?.status === 429) {
-            return res.status(429).json({ 
-                error: 'Limite de requêtes dépassée',
-                details: 'Attendez un moment avant de réessayer'
-            });
+            return res.status(429).json({ error: 'Limite du service IA atteinte. Réessayez plus tard.' });
         }
 
-        return res.status(500).json({ 
-            error: 'Erreur serveur',
-            details: error.message
-        });
+        return res.status(500).json({ error: 'Erreur serveur temporaire' });
     }
 });
 

@@ -1,4 +1,4 @@
-# Variables d'environnement (IMPORTANT: Ne jamais partager les clés API!)
+ # Variables d'environnement (IMPORTANT: Ne jamais partager les clés API!)
 .env
 .env.local
 .env.*.local

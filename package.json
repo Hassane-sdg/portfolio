@@ -2,10 +2,10 @@
   "name": "mhtech-chatbot-server",
   "version": "1.0.0",
   "description": "Serveur sécurisé pour le chatbot Gemini du portfolio MHTech",
-  "main": "server.js",
+  "main": "server/server.js",
   "scripts": {
-    "start": "node server.js",
-    "dev": "nodemon server.js"
+    "start": "node server/server.js",
+    "dev": "nodemon server/server.js"
   },
   "keywords": ["chatbot", "gemini", "portfolio", "api"],
   "author": "MHTech",
