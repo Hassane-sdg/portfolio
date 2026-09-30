@@ -10,24 +10,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!-- SÃ©curitÃ©: Content Security Policy -->
+    <!-- Sécurité: Content Security Policy -->
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://fonts.googleapis.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com https://maxcdn.bootstrapcdn.com; img-src 'self' data: https:; connect-src 'self' http://localhost:3000 https://api.emailjs.com https://formspree.io; frame-ancestors 'none';">
-    <!-- SÃ©curitÃ©: X-Content-Type-Options -->
+    <!-- Sécurité: X-Content-Type-Options -->
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
-    <!-- SÃ©curitÃ©: X-Frame-Options -->
+    <!-- Sécurité: X-Frame-Options -->
     <meta http-equiv="X-Frame-Options" content="DENY">
-    <!-- SÃ©curitÃ©: X-XSS-Protection -->
+    <!-- Sécurité: X-XSS-Protection -->
     <meta http-equiv="X-XSS-Protection" content="1; mode=block">
-    <!-- SÃ©curitÃ©: Referrer Policy -->
+    <!-- Sécurité: Referrer Policy -->
     <meta name="referrer" content="strict-origin-when-cross-origin">
-    <!-- SÃ©curitÃ©: Permissions Policy -->
+    <!-- Sécurité: Permissions Policy -->
     <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=(), usb=(), magnetometer=(), gyroscope=()">
-    <title>Moctar Hassane | Ã‰lectronique & Informatique Industrielle</title>
+    <title>Moctar Hassane | Électronique & Informatique Industrielle</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;500;600&family=Share+Tech+Mono&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/index.min.js" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <!-- Script de sÃ©curitÃ© -->
+    <!-- Script de sécurité -->
     <script src="security-config.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <style>
         :root {
@@ -41,7 +41,7 @@
             --neon-glow: 0 0 15px var(--primary-color);
             --grid-color: rgba(0, 255, 157, 0.1);
         }
-            /* Mode clair (override des variables) â€” contrastÃ© pour lisibilitÃ© */
+            /* Mode clair (override des variables) — contrasté pour lisibilité */
             body.light {
                 --primary-color: #00ff9d;
                 --secondary-color: #0088ff;
@@ -54,7 +54,7 @@
                 --grid-color: rgba(0, 0, 0, 0.04);
             }
 
-            /* Boutons de contrÃ´le (thÃ¨me / langue) */
+            /* Boutons de contrôle (thème / langue) */
             .controls { display: flex; gap: 1rem; align-items: center; }
 
             .control-btn {
@@ -82,7 +82,7 @@
                 transition: all 0.3s ease;
             }
 
-            /* Pour le bouton thÃ¨me avec deux icÃ´nes */
+            /* Pour le bouton thème avec deux icônes */
             .control-btn#themeToggle i:first-child {
                 position: absolute;
                 left: 10px;
@@ -103,7 +103,7 @@
                 opacity: 1;
             }
 
-            /* Pour le bouton langue (une seule icÃ´ne) */
+            /* Pour le bouton langue (une seule icône) */
             .control-btn#langToggle i {
                 position: relative;
                 left: 0;
@@ -126,7 +126,7 @@
                 transform: scale(1.05);
             }
 
-            /* Ã‰tat actif pour contrÃ´les (glow) */
+            /* État actif pour contrôles (glow) */
             .control-btn.active {
                 background: rgba(0, 255, 157, 0.3);
                 box-shadow: 0 0 25px rgba(0, 255, 157, 0.6);
@@ -174,7 +174,7 @@
                 opacity: 0.08;
             }
 
-            /* AbbrÃ©viations des boutons */
+            /* Abbréviations des boutons */
             .control-btn::after {
                 content: attr(data-abbr);
                 position: absolute;
@@ -204,7 +204,7 @@
                 opacity: 1;
             }
             
-            /* Labels pour boutons contrÃ´le */
+            /* Labels pour boutons contrôle */
             .control-label {
                 transition: all 0.3s ease;
                 white-space: nowrap;
@@ -236,7 +236,7 @@
             position: relative;
         }
         
-        /* ArriÃ¨re-plan avec dÃ©filement de 0 et 1 (style matrix) */
+        /* Arrière-plan avec défilement de 0 et 1 (style matrix) */
         .binary-background {
             position: fixed;
             top: 0;
@@ -270,7 +270,7 @@
             }
         }
         
-        /* Overlay pour amÃ©liorer la lisibilitÃ© */
+        /* Overlay pour améliorer la lisibilité */
         .content-overlay {
             position: fixed;
             top: 0;
@@ -589,7 +589,7 @@
             }
         }
         
-        /* Sections gÃ©nÃ©rales */
+        /* Sections générales */
         section {
             padding: 6rem 2rem;
             max-width: 1400px;
@@ -632,7 +632,7 @@
             background: linear-gradient(90deg, var(--primary-color), transparent);
         }
         
-        /* Hero Section avec photo animÃ©e amÃ©liorÃ©e */
+        /* Hero Section avec photo animée améliorée */
         .hero {
             min-height: 100vh;
             display: flex;
@@ -724,7 +724,7 @@
             box-shadow: 0 10px 30px rgba(0, 255, 157, 0.8);
         }
         
-        /* Zone photo de profil animÃ©e amÃ©liorÃ©e */
+        /* Zone photo de profil animée améliorée */
         .profile-container {
             flex: 1;
             display: flex;
@@ -830,7 +830,7 @@
             100% { transform: rotate(-360deg); }
         }
         
-        /* Souris interactive amÃ©liorÃ©e */
+        /* Souris interactive améliorée */
         .interactive-mouse {
             position: absolute;
             width: 50px;
@@ -883,7 +883,7 @@
             100% { transform: translateX(-50%) translateY(25px); opacity: 0; }
         }
         
-        /* Section Ã€ propos amÃ©liorÃ©e */
+        /* Section À propos améliorée */
         .about-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -951,7 +951,7 @@
             margin-bottom: 0.5rem;
         }
         
-        /* Section CompÃ©tences avec flip cards amÃ©liorÃ©es */
+        /* Section Compétences avec flip cards améliorées */
         .skills-container {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -1023,14 +1023,14 @@
         }
         
         .flip-card-back li::before {
-            content: 'â–¸';
+            content: '▸';
             color: var(--primary-color);
             position: absolute;
             left: 0;
             font-weight: bold;
         }
         
-        /* Section Projets avec carrousel amÃ©liorÃ© */
+        /* Section Projets avec carrousel amélioré */
         .projects-carousel {
             position: relative;
             overflow: hidden;
@@ -1262,7 +1262,7 @@
             transform: scale(1.2);
         }
         
-        /* Section CV amÃ©liorÃ©e */
+        /* Section CV améliorée */
         .cv-section {
             text-align: center;
             position: relative;
@@ -1352,7 +1352,7 @@
             box-shadow: 0 10px 30px rgba(255, 0, 255, 0.8);
         }
         
-        /* Section Contact amÃ©liorÃ©e */
+        /* Section Contact améliorée */
         .contact-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -1437,7 +1437,7 @@
             resize: vertical;
         }
         
-        /* Chatbot amÃ©liorÃ© */
+        /* Chatbot amélioré */
         .chatbot-container {
             position: fixed;
             bottom: 40px;
@@ -1641,7 +1641,7 @@
             box-shadow: 0 0 10px var(--primary-color);
         }
         
-        /* Footer amÃ©liorÃ© */
+        /* Footer amélioré */
         footer {
             background-color: var(--darker-bg);
             padding: 4rem 2rem;
@@ -1958,7 +1958,7 @@
     </style>
 </head>
 <body>
-    <!-- ArriÃ¨re-plan avec dÃ©filement de 0 et 1 -->
+    <!-- Arrière-plan avec défilement de 0 et 1 -->
     <div class="binary-background" id="binaryBackground"></div>
     <div class="content-overlay"></div>
     
@@ -1971,8 +1971,8 @@
             <div class="logo">Moctar Hassane</div>
             <div class="controls" style="display: flex; gap: 1.5rem; align-items: center; margin-left: 1rem;">
                 <div class="control-group" style="display: flex; flex-direction: column; align-items: center; gap: 0.3rem;">
-                    <button class="control-btn" id="themeToggle" title="Basculer thÃ¨me" data-abbr="THÃˆME"><i class="fas fa-sun"></i><i class="fas fa-moon"></i></button>
-                    <span class="control-label" style="font-size: 0.7rem; color: var(--primary-color); font-family: 'Share Tech Mono', monospace;">THÃˆME</span>
+                    <button class="control-btn" id="themeToggle" title="Basculer thème" data-abbr="THÈME"><i class="fas fa-sun"></i><i class="fas fa-moon"></i></button>
+                    <span class="control-label" style="font-size: 0.7rem; color: var(--primary-color); font-family: 'Share Tech Mono', monospace;">THÈME</span>
                 </div>
                 <div class="control-group" style="display: flex; flex-direction: column; align-items: center; gap: 0.3rem;">
                     <button class="control-btn" id="langToggle" title="Basculer langue" data-abbr="LANG"><i class="fas fa-globe"></i></button>
@@ -1985,7 +1985,7 @@
             <div class="nav-links" id="navLinks">
                 <div class="nav-group nav-primary">
                     <a href="#home" class="nav-link active">Accueil</a>
-                    <a href="#about" class="nav-link">Ã€ propos</a>
+                    <a href="#about" class="nav-link">À propos</a>
                     <a href="#skills" class="nav-link">Expertise</a>
                     <a href="#projects" class="nav-link">Projets</a>
                     <a href="gallery.html" class="nav-link">Galerie</a>
@@ -2006,8 +2006,8 @@
     <section id="home" class="hero">
         <div class="hero-content">
             <h1>Sawadogo <span>Moctar Hassane</span></h1>
-            <div class="hero-subtitle">Ã‰lectronique & Informatique Industrielle</div>
-            <p class="hero-description">Ã‰tudiant en 3áµ‰ annÃ©e Ã  lâ€™IST, passionnÃ© par lâ€™Ã©lectronique embarquÃ©e, la domotique et les drones agricoles. Je dÃ©veloppe des dashboards interactifs et me prÃ©pare Ã  lancer MHTech, une entreprise technologique tournÃ©e vers lâ€™avenir.</p>
+            <div class="hero-subtitle">Électronique & Informatique Industrielle</div>
+            <p class="hero-description">Étudiant en 3ᵉ année à l’IST, passionné par l’électronique embarquée, la domotique et les drones agricoles. Je développe des dashboards interactifs et me prépare à lancer MHTech, une entreprise technologique tournée vers l’avenir.</p>
             <div style="display: flex; gap: 1.5rem; flex-wrap: wrap;">
                 <a href="#projects" class="cta-button">Voir mes projets</a>
                 <a href="#contact" class="cta-button" style="background: linear-gradient(90deg, var(--accent-color), var(--secondary-color));">Me contacter</a>
@@ -2033,34 +2033,34 @@
         <div class="interactive-mouse" id="interactiveMouse"></div>
     </section>
 
-    <!-- Section Ã€ propos -->
+    <!-- Section À propos -->
     <section id="about" class="about">
         <div class="section-title">
-            <h2>Ã€ propos de moi</h2>
+            <h2>À propos de moi</h2>
         </div>
         <div class="about-content">
             <div class="about-text">
-                <p>Je mâ€™appelle Sawadogo Moctar Hassane, Ã©tudiant burkinabÃ¨ en 3áµ‰ annÃ©e dâ€™Ã‰lectronique et Informatique Industrielle Ã  lâ€™Institut SupÃ©rieur de Technologie (IST). PassionnÃ© par la technologie depuis mon plus jeune Ã¢ge, je me spÃ©cialise dans lâ€™Ã©lectronique embarquÃ©e, la domotique et les systÃ¨mes automatisÃ©s.</p>
-                <p>Mon approche de lâ€™apprentissage est avant tout pratique et orientÃ©e terrain. Jâ€™assimile mieux les concepts en expÃ©rimentant, en construisant des prototypes et en rÃ©solvant des problÃ¨mes concrets. Les explications visuelles, structurÃ©es et progressives sont celles qui me permettent de donner le meilleur de moi-mÃªme.</p>
-                <p>En parallÃ¨le de mes Ã©tudes, je suis membre du Bureau de lâ€™Association pour lâ€™Ã‰ducation Entrepreneuriale, Culturelle et Sportive de Bassinko. Jâ€™y participe activement Ã  lâ€™organisation dâ€™Ã©vÃ©nements communautaires et je mâ€™investis pour transformer les idÃ©es des jeunes en projets entrepreneuriaux concrets.</p>
-                <p>Ã€ long terme, mon objectif est de fonder MHTech, une entreprise technologique dÃ©diÃ©e Ã  la domotique et Ã  lâ€™agriculture intelligente, avec lâ€™ambition dâ€™apporter des solutions innovantes et adaptÃ©es aux rÃ©alitÃ©s du Burkina Faso et de lâ€™Afrique de lâ€™Ouest.</p>
+                <p>Je m’appelle Sawadogo Moctar Hassane, étudiant burkinabè en 3ᵉ année d’Électronique et Informatique Industrielle à l’Institut Supérieur de Technologie (IST). Passionné par la technologie depuis mon plus jeune âge, je me spécialise dans l’électronique embarquée, la domotique et les systèmes automatisés.</p>
+                <p>Mon approche de l’apprentissage est avant tout pratique et orientée terrain. J’assimile mieux les concepts en expérimentant, en construisant des prototypes et en résolvant des problèmes concrets. Les explications visuelles, structurées et progressives sont celles qui me permettent de donner le meilleur de moi-même.</p>
+                <p>En parallèle de mes études, je suis membre du Bureau de l’Association pour l’Éducation Entrepreneuriale, Culturelle et Sportive de Bassinko. J’y participe activement à l’organisation d’événements communautaires et je m’investis pour transformer les idées des jeunes en projets entrepreneuriaux concrets.</p>
+                <p>À long terme, mon objectif est de fonder MHTech, une entreprise technologique dédiée à la domotique et à l’agriculture intelligente, avec l’ambition d’apporter des solutions innovantes et adaptées aux réalités du Burkina Faso et de l’Afrique de l’Ouest.</p>
             </div>
             <div class="about-stats">
                 <div class="stat-item">
-                    <div class="stat-number">3áµ‰</div>
-                    <p>AnnÃ©e d'Ã©tudes en Ã‰lectronique & Informatique Industrielle</p>
+                    <div class="stat-number">3ᵉ</div>
+                    <p>Année d'études en Électronique & Informatique Industrielle</p>
                 </div>
                 <div class="stat-item">
                     <div class="stat-number">5+</div>
-                    <p>Projets technologiques rÃ©alisÃ©s ou en cours</p>
+                    <p>Projets technologiques réalisés ou en cours</p>
                 </div>
                 <div class="stat-item">
                     <div class="stat-number">8+</div>
-                    <p>Technologies et compÃ©tences maÃ®trisÃ©es</p>
+                    <p>Technologies et compétences maîtrisées</p>
                 </div>
                 <div class="stat-item">
                     <div class="stat-number">100%</div>
-                    <p>PassionnÃ© par l'innovation technologique</p>
+                    <p>Passionné par l'innovation technologique</p>
                 </div>
             </div>
         </div>
@@ -2077,17 +2077,17 @@
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
                         <i class="fas fa-microchip"></i>
-                        <h3>Ã‰lectronique & MicrocontrÃ´leurs</h3>
+                        <h3>Électronique & Microcontrôleurs</h3>
                         <p>Cliquez pour en savoir plus</p>
                     </div>
                     <div class="flip-card-back">
-                        <h3>Ã‰lectronique EmbarquÃ©e</h3>
+                        <h3>Électronique Embarquée</h3>
                         <ul>
-                            <li>Arduino (capteurs, servomoteurs, moteurs pas-Ã -pas)</li>
+                            <li>Arduino (capteurs, servomoteurs, moteurs pas-à-pas)</li>
                             <li>ESP32 & Raspberry Pi</li>
-                            <li>Conception de circuits Ã©lectroniques</li>
+                            <li>Conception de circuits électroniques</li>
                             <li>Prototypage rapide</li>
-                            <li>SystÃ¨mes de contrÃ´le automatisÃ©s</li>
+                            <li>Systèmes de contrôle automatisés</li>
                         </ul>
                     </div>
                 </div>
@@ -2098,17 +2098,17 @@
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
                         <i class="fas fa-code"></i>
-                        <h3>DÃ©veloppement Logiciel</h3>
+                        <h3>Développement Logiciel</h3>
                         <p>Cliquez pour en savoir plus</p>
                     </div>
                     <div class="flip-card-back">
-                        <h3>DÃ©veloppement</h3>
+                        <h3>Développement</h3>
                         <ul>
-                            <li>Python (niveau avancÃ©)</li>
+                            <li>Python (niveau avancé)</li>
                             <li>Kivy (applications modernes)</li>
                             <li>Java & JavaFX (en apprentissage)</li>
-                            <li>CrÃ©ation d'interfaces graphiques</li>
-                            <li>Algorithmique et structures de donnÃ©es</li>
+                            <li>Création d'interfaces graphiques</li>
+                            <li>Algorithmique et structures de données</li>
                         </ul>
                     </div>
                 </div>
@@ -2127,9 +2127,9 @@
                         <ul>
                             <li>Internet des Objets (formation suivie)</li>
                             <li>Domotique et maison intelligente</li>
-                            <li>Drones et systÃ¨mes autonomes</li>
+                            <li>Drones et systèmes autonomes</li>
                             <li>Communication sans fil (WiFi, Bluetooth)</li>
-                            <li>SystÃ¨mes de surveillance et contrÃ´le</li>
+                            <li>Systèmes de surveillance et contrôle</li>
                         </ul>
                     </div>
                 </div>
@@ -2140,17 +2140,17 @@
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
                         <i class="fas fa-cube"></i>
-                        <h3>ModÃ©lisation 3D</h3>
+                        <h3>Modélisation 3D</h3>
                         <p>Cliquez pour en savoir plus</p>
                     </div>
                     <div class="flip-card-back">
                         <h3>Conception 3D</h3>
                         <ul>
                             <li>SolidWorks (en apprentissage)</li>
-                            <li>ModÃ©lisation de piÃ¨ces complexes</li>
+                            <li>Modélisation de pièces complexes</li>
                             <li>Conception de drones et bras robotiques</li>
-                            <li>PrÃ©paration pour impression 3D</li>
-                            <li>Design de composants Ã©lectroniques</li>
+                            <li>Préparation pour impression 3D</li>
+                            <li>Design de composants électroniques</li>
                         </ul>
                     </div>
                 </div>
@@ -2177,11 +2177,11 @@
                                     <i class="fas fa-snowflake"></i>
                                 </div>
                                 <div class="project-info">
-                                    <h3>GlaciÃ¨re Ã  Modules Peltier</h3>
-                                    <p>Prototype de refroidissement compact basÃ© sur des modules Peltier et un systÃ¨me de rÃ©gulation thermique.</p>
+                                    <h3>Glacière à Modules Peltier</h3>
+                                    <p>Prototype de refroidissement compact basé sur des modules Peltier et un système de régulation thermique.</p>
                                     <div class="project-tags">
                                         <span class="project-tag">Peltier</span>
-                                        <span class="project-tag">Ã‰lectronique</span>
+                                        <span class="project-tag">Électronique</span>
                                         <span class="project-tag">Refroidissement</span>
                                         <span class="project-tag">Prototypage</span>
                                     </div>
@@ -2189,13 +2189,13 @@
                             </div>
                             <div class="project-back">
                                 <div class="project-gallery">
-                                    <img src="assets/projects/Glaci%C3%A8re%20%C3%A0%20Modules%20peltier/61JNvPXjniL._AC_UF894%2C1000_QL80_.jpg" alt="GlaciÃ¨re Ã  modules Peltier" loading="lazy">
-                                    <img src="assets/projects/Glaci%C3%A8re%20%C3%A0%20Modules%20peltier/images%20%282%29.jpe" alt="Prototype de glaciÃ¨re Peltier" loading="lazy">
+                                    <img src="assets/projects/Glaci%C3%A8re%20%C3%A0%20Modules%20peltier/61JNvPXjniL._AC_UF894%2C1000_QL80_.jpg" alt="Glacière à modules Peltier" loading="lazy">
+                                    <img src="assets/projects/Glaci%C3%A8re%20%C3%A0%20Modules%20peltier/images%20%282%29.jpe" alt="Prototype de glacière Peltier" loading="lazy">
                                 </div>
                                 <div class="project-back-text">
-                                    <h3>GlaciÃ¨re Peltier - RÃ©sumÃ©</h3>
-                                    <p>Solution de refroidissement conÃ§ue autour de lâ€™effet thermoÃ©lectrique, avec une approche orientÃ©e expÃ©rimentation et prototypage.</p>
-                                    <a href="project-details.html?project=glacier" class="project-link">Voir les dÃ©tails <i class="fas fa-arrow-right"></i></a>
+                                    <h3>Glacière Peltier - Résumé</h3>
+                                    <p>Solution de refroidissement conçue autour de l’effet thermoélectrique, avec une approche orientée expérimentation et prototypage.</p>
+                                    <a href="project-details.html?project=glacier" class="project-link">Voir les détails <i class="fas fa-arrow-right"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -2209,7 +2209,7 @@
                                 </div>
                                 <div class="project-info">
                                     <h3>Drone Agricole Intelligent</h3>
-                                    <p>Drone autonome pour l'agriculture de prÃ©cision avec dÃ©limitation de parcelles, pulvÃ©risation intelligente et gestion des obstacles.</p>
+                                    <p>Drone autonome pour l'agriculture de précision avec délimitation de parcelles, pulvérisation intelligente et gestion des obstacles.</p>
                                     <div class="project-tags">
                                         <span class="project-tag">Drone</span>
                                         <span class="project-tag">Agriculture</span>
@@ -2222,21 +2222,21 @@
                                 <div class="project-gallery">
                                     <img src="assets/projects/Drone%20agricole/agras-t60-farm-1-6.webp" alt="Drone agricole" loading="lazy">
                                     <img src="assets/projects/Drone%20agricole/image1.jpe" alt="Prototype de drone agricole" loading="lazy">
-                                    <img src="assets/projects/Drone%20agricole/images%20%281%29.jpe" alt="SystÃ¨me de drone agricole" loading="lazy">
+                                    <img src="assets/projects/Drone%20agricole/images%20%281%29.jpe" alt="Système de drone agricole" loading="lazy">
                                     <img src="assets/projects/Drone%20agricole/images.jpe" alt="Projet de drone agricole" loading="lazy">
                                 </div>
                                 <div class="project-back-text">
-                                    <h3>ðŸš Drone Agricole Autonome</h3>
-                                    <p><strong>DÃ©fi:</strong> Automatiser la pulvÃ©risation agricole intelligente.</p>
-                                    <p><strong>RÃ©alisation:</strong></p>
+                                    <h3>🚁 Drone Agricole Autonome</h3>
+                                    <p><strong>Défi:</strong> Automatiser la pulvérisation agricole intelligente.</p>
+                                    <p><strong>Réalisation:</strong></p>
                                     <ul style="text-align:left; margin:0.5rem 0; padding-left:1.2rem;">
-                                        <li>Cartographie par dÃ©limitation</li>
-                                        <li>PulvÃ©risation ciblÃ©e</li>
-                                        <li>Capteurs de dÃ©tection</li>
-                                        <li>Ã‰vitement d'obstacles</li>
+                                        <li>Cartographie par délimitation</li>
+                                        <li>Pulvérisation ciblée</li>
+                                        <li>Capteurs de détection</li>
+                                        <li>Évitement d'obstacles</li>
                                     </ul>
-                                    <p><strong>Impact:</strong> RÃ©duction 30% des ressources agricoles.</p>
-                                    <a href="project-drone.html" class="project-link">Voir les dÃ©tails <i class="fas fa-arrow-right"></i></a>
+                                    <p><strong>Impact:</strong> Réduction 30% des ressources agricoles.</p>
+                                    <a href="project-drone.html" class="project-link">Voir les détails <i class="fas fa-arrow-right"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -2249,8 +2249,8 @@
                                     <i class="fas fa-fish"></i>
                                 </div>
                                 <div class="project-info">
-                                    <h3>Pisciculture + Jardinage AutomatisÃ©</h3>
-                                    <p>SystÃ¨me intÃ©grÃ© combinant pisciculture et jardinage avec filtration automatisÃ©e et irrigation intelligente basÃ©e sur les besoins des plantes.</p>
+                                    <h3>Pisciculture + Jardinage Automatisé</h3>
+                                    <p>Système intégré combinant pisciculture et jardinage avec filtration automatisée et irrigation intelligente basée sur les besoins des plantes.</p>
                                     <div class="project-tags">
                                         <span class="project-tag">Arduino</span>
                                         <span class="project-tag">Capteurs</span>
@@ -2262,22 +2262,22 @@
                             <div class="project-back">
                                 <div class="project-gallery">
                                     <img src="assets/projects/Pissiculture%20et%20jardinnage/71eJ765qW4L._AC_UF894%2C1000_QL80_.jpg" alt="Pisciculture et jardinage" loading="lazy">
-                                    <img src="assets/projects/Pissiculture%20et%20jardinnage/Aquaponics-Intelligent-System-Agricultural-Planting-and-Breeding-Volume.webp" alt="SystÃ¨me aquaponique intelligent" loading="lazy">
+                                    <img src="assets/projects/Pissiculture%20et%20jardinnage/Aquaponics-Intelligent-System-Agricultural-Planting-and-Breeding-Volume.webp" alt="Système aquaponique intelligent" loading="lazy">
                                     <img src="assets/projects/Pissiculture%20et%20jardinnage/images%20%281%29.jpe" alt="Installation de pisciculture" loading="lazy">
-                                    <img src="assets/projects/Pissiculture%20et%20jardinnage/images.jpe" alt="Jardinage associÃ© Ã  la pisciculture" loading="lazy">
+                                    <img src="assets/projects/Pissiculture%20et%20jardinnage/images.jpe" alt="Jardinage associé à la pisciculture" loading="lazy">
                                 </div>
                                 <div class="project-back-text">
-                                    <h3>ðŸ  Aquaponie AutomatisÃ©e</h3>
-                                    <p><strong>DÃ©fi:</strong> CrÃ©er un systÃ¨me aquaponique rÃ©silient avec peu de maintenance.</p>
-                                    <p><strong>RÃ©alisation:</strong></p>
+                                    <h3>🐠 Aquaponie Automatisée</h3>
+                                    <p><strong>Défi:</strong> Créer un système aquaponique résilient avec peu de maintenance.</p>
+                                    <p><strong>Réalisation:</strong></p>
                                     <ul style="text-align:left; margin:0.5rem 0; padding-left:1.2rem;">
-                                        <li>Capteurs multiples (pH, tempÃ©rature)</li>
+                                        <li>Capteurs multiples (pH, température)</li>
                                         <li>Pompes et irrigation automatiques</li>
-                                        <li>ContrÃ´leur Arduino</li>
-                                        <li>RÃ©cupÃ©ration eau (0 dÃ©chets)</li>
+                                        <li>Contrôleur Arduino</li>
+                                        <li>Récupération eau (0 déchets)</li>
                                     </ul>
-                                    <p><strong>Impact:</strong> Autonomie alimentaire pour petit mÃ©nage.</p>
-                                    <a href="project-details.html?project=pisciculture" class="project-link">Voir les dÃ©tails <i class="fas fa-arrow-right"></i></a>
+                                    <p><strong>Impact:</strong> Autonomie alimentaire pour petit ménage.</p>
+                                    <a href="project-details.html?project=pisciculture" class="project-link">Voir les détails <i class="fas fa-arrow-right"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -2293,8 +2293,8 @@
                                     <i class="fas fa-robot"></i>
                                 </div>
                                 <div class="project-info">
-                                    <h3>Robot Ã‰boueur AutomatisÃ©</h3>
-                                    <p>Robot mobile autonome pour la collecte des dÃ©chets avec systÃ¨me de tri automatique et navigation dans des environnements urbains.</p>
+                                    <h3>Robot Éboueur Automatisé</h3>
+                                    <p>Robot mobile autonome pour la collecte des déchets avec système de tri automatique et navigation dans des environnements urbains.</p>
                                     <div class="project-tags">
                                         <span class="project-tag">Robotique</span>
                                         <span class="project-tag">Arduino</span>
@@ -2304,19 +2304,19 @@
                                 </div>
                             </div>
                             <div class="project-back">
-                                <div class="project-gallery-empty">Images du projet momentanÃ©ment indisponibles.</div>
+                                <div class="project-gallery-empty">Images du projet momentanément indisponibles.</div>
                                 <div class="project-back-text">
-                                    <h3>ðŸ¤– Robot Collecteur Autonome</h3>
-                                    <p><strong>DÃ©fi:</strong> Automatiser la collecte et le tri des dÃ©chets.</p>
-                                    <p><strong>RÃ©alisation:</strong></p>
+                                    <h3>🤖 Robot Collecteur Autonome</h3>
+                                    <p><strong>Défi:</strong> Automatiser la collecte et le tri des déchets.</p>
+                                    <p><strong>Réalisation:</strong></p>
                                     <ul style="text-align:left; margin:0.5rem 0; padding-left:1.2rem;">
-                                        <li>Navigation SLAM lÃ©gÃ¨re</li>
+                                        <li>Navigation SLAM légère</li>
                                         <li>Capteurs ultrason</li>
                                         <li>Bras robotique pour tri</li>
-                                        <li>Batterie LiPo optimisÃ©e</li>
+                                        <li>Batterie LiPo optimisée</li>
                                     </ul>
-                                    <p><strong>Impact:</strong> Solution d'aide pour communautÃ©s.</p>
-                                    <a href="project-details.html?project=robot" class="project-link">Voir les dÃ©tails <i class="fas fa-arrow-right"></i></a>
+                                    <p><strong>Impact:</strong> Solution d'aide pour communautés.</p>
+                                    <a href="project-details.html?project=robot" class="project-link">Voir les détails <i class="fas fa-arrow-right"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -2329,8 +2329,8 @@
                                     <i class="fas fa-home"></i>
                                 </div>
                                 <div class="project-info">
-                                    <h3>SystÃ¨me Domotique Intelligent</h3>
-                                    <p>Plateforme domotique complÃ¨te pour la gestion automatisÃ©e d'une habitation avec contrÃ´le Ã  distance et optimisation Ã©nergÃ©tique.</p>
+                                    <h3>Système Domotique Intelligent</h3>
+                                    <p>Plateforme domotique complète pour la gestion automatisée d'une habitation avec contrôle à distance et optimisation énergétique.</p>
                                     <div class="project-tags">
                                         <span class="project-tag">Domotique</span>
                                         <span class="project-tag">ESP32</span>
@@ -2342,20 +2342,20 @@
                             <div class="project-back">
                                 <div class="project-gallery">
                                     <img src="assets/projects/Home%20garden/images%20%281%29.jpe" alt="Home garden" loading="lazy">
-                                    <img src="assets/projects/Home%20garden/images.jpe" alt="SystÃ¨me Home garden" loading="lazy">
+                                    <img src="assets/projects/Home%20garden/images.jpe" alt="Système Home garden" loading="lazy">
                                 </div>
                                 <div class="project-back-text">
-                                    <h3>ðŸ  Maison Intelligente MHTech</h3>
-                                    <p><strong>DÃ©fi:</strong> CrÃ©er une plateforme domotique modulaire et open-source.</p>
-                                    <p><strong>RÃ©alisation:</strong></p>
+                                    <h3>🏠 Maison Intelligente MHTech</h3>
+                                    <p><strong>Défi:</strong> Créer une plateforme domotique modulaire et open-source.</p>
+                                    <p><strong>Réalisation:</strong></p>
                                     <ul style="text-align:left; margin:0.5rem 0; padding-left:1.2rem;">
                                         <li>Dashboard Kivy multiplateforme</li>
-                                        <li>ContrÃ´le ESP32 WiFi/BLE</li>
-                                        <li>DÃ©tection prÃ©sence PIR</li>
-                                        <li>Optimisation Ã©nergÃ©tique</li>
+                                        <li>Contrôle ESP32 WiFi/BLE</li>
+                                        <li>Détection présence PIR</li>
+                                        <li>Optimisation énergétique</li>
                                     </ul>
-                                    <p><strong>Impact:</strong> RÃ©duit consommation Ã©lectrique de 40%.</p>
-                                    <a href="project-details.html?project=home" class="project-link">Voir les dÃ©tails <i class="fas fa-arrow-right"></i></a>
+                                    <p><strong>Impact:</strong> Réduit consommation électrique de 40%.</p>
+                                    <a href="project-details.html?project=home" class="project-link">Voir les détails <i class="fas fa-arrow-right"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -2369,7 +2369,7 @@
                                 </div>
                                 <div class="project-info">
                                     <h3>Hydroponie Intelligente</h3>
-                                    <p>SystÃ¨me de culture hors-sol combinant suivi des paramÃ¨tres et gestion optimisÃ©e des ressources.</p>
+                                    <p>Système de culture hors-sol combinant suivi des paramètres et gestion optimisée des ressources.</p>
                                     <div class="project-tags">
                                         <span class="project-tag">Hydroponie</span>
                                         <span class="project-tag">Capteurs</span>
@@ -2381,20 +2381,20 @@
                             <div class="project-back">
                                 <div class="project-gallery">
                                     <img src="assets/projects/Hydroponie%20intelligente/images%20%281%29.jpe" alt="Installation hydroponique" loading="lazy">
-                                    <img src="assets/projects/Hydroponie%20intelligente/images%20%282%29.jpe" alt="SystÃ¨me hydroponique intelligent" loading="lazy">
+                                    <img src="assets/projects/Hydroponie%20intelligente/images%20%282%29.jpe" alt="Système hydroponique intelligent" loading="lazy">
                                     <img src="assets/projects/Hydroponie%20intelligente/images.jpe" alt="Projet d'hydroponie" loading="lazy">
                                 </div>
                                 <div class="project-back-text">
-                                    <h3>Hydroponie Intelligente - RÃ©sumÃ©</h3>
-                                    <p><strong>DÃ©fi:</strong> AmÃ©liorer le suivi dâ€™une culture hors-sol et lâ€™utilisation de lâ€™eau.</p>
-                                    <p><strong>RÃ©alisation:</strong></p>
+                                    <h3>Hydroponie Intelligente - Résumé</h3>
+                                    <p><strong>Défi:</strong> Améliorer le suivi d’une culture hors-sol et l’utilisation de l’eau.</p>
+                                    <p><strong>Réalisation:</strong></p>
                                     <ul style="text-align:left; margin:0.5rem 0; padding-left:1.2rem;">
-                                        <li>Suivi des paramÃ¨tres de culture</li>
-                                        <li>Gestion optimisÃ©e de lâ€™irrigation</li>
+                                        <li>Suivi des paramètres de culture</li>
+                                        <li>Gestion optimisée de l’irrigation</li>
                                         <li>Automatisation progressive</li>
-                                        <li>Approche orientÃ©e agriculture durable</li>
+                                        <li>Approche orientée agriculture durable</li>
                                     </ul>
-                                    <a href="project-details.html?project=hydroponie" class="project-link">Voir les dÃ©tails <i class="fas fa-arrow-right"></i></a>
+                                    <a href="project-details.html?project=hydroponie" class="project-link">Voir les détails <i class="fas fa-arrow-right"></i></a>
                                 </div>
                             </div>
                                 </div>
@@ -2481,86 +2481,86 @@
             <h2>Mon Curriculum Vitae</h2>
         </div>
         <div class="cv-container">
-            <h3>Parcours AcadÃ©mique & Professionnel</h3>
+            <h3>Parcours Académique & Professionnel</h3>
             <div class="cv-details">
                 <div class="cv-detail-item">
-                    <h4>ðŸ“š Formation Actuelle</h4>
+                    <h4>📚 Formation Actuelle</h4>
                     <p><strong>Institut des Sciences et Technologies (IST)</strong><br>
-                    3Ã¨me annÃ©e d'Ã‰lectronique et Informatique Industrielle<br>
+                    3ème année d'Électronique et Informatique Industrielle<br>
                     Ouagadougou, Burkina Faso<br>
-                    <em>SpÃ©cialisations : Ã‰lectronique embarquÃ©e, Automatisation, IoT</em></p>
+                    <em>Spécialisations : Électronique embarquée, Automatisation, IoT</em></p>
                 </div>
                 <div class="cv-detail-item">
-                    <h4>ðŸ’¼ ExpÃ©rience Pratique</h4>
-                    <p><strong>Projets personnels et acadÃ©miques :</strong><br>
-                    â€¢ Conception de circuits Ã©lectroniques<br>
-                    â€¢ DÃ©veloppement d'applications Python/Kivy<br>
-                    â€¢ SystÃ¨mes IoT et domotique<br>
-                    â€¢ Prototypage Ã©lectronique (Arduino, ESP32)<br>
-                    â€¢ 5+ projets technologiques rÃ©alisÃ©s</p>
+                    <h4>💼 Expérience Pratique</h4>
+                    <p><strong>Projets personnels et académiques :</strong><br>
+                    • Conception de circuits électroniques<br>
+                    • Développement d'applications Python/Kivy<br>
+                    • Systèmes IoT et domotique<br>
+                    • Prototypage électronique (Arduino, ESP32)<br>
+                    • 5+ projets technologiques réalisés</p>
                 </div>
                 <div class="cv-detail-item">
-                    <h4>ðŸš€ ResponsabilitÃ©s Sociales</h4>
-                    <p><strong>Bureau de l'association Ã  Bassinko :</strong><br>
-                    â€¢ Organisation d'Ã©vÃ©nements communautaires<br>
-                    â€¢ Promotion de l'entrepreneuriat<br>
-                    â€¢ Ã‰ducation technologique et culturelle<br>
-                    â€¢ Leadership et gestion de projets collectifs</p>
+                    <h4>🚀 Responsabilités Sociales</h4>
+                    <p><strong>Bureau de l'association à Bassinko :</strong><br>
+                    • Organisation d'événements communautaires<br>
+                    • Promotion de l'entrepreneuriat<br>
+                    • Éducation technologique et culturelle<br>
+                    • Leadership et gestion de projets collectifs</p>
                 </div>
                 <div class="cv-detail-item">
-                    <h4>ðŸŽ¯ Objectifs Professionnels</h4>
+                    <h4>🎯 Objectifs Professionnels</h4>
                     <p><strong>Court terme :</strong><br>
-                    â€¢ Obtenir un stage en Ã©lectronique/domotique<br>
-                    â€¢ MaÃ®triser Python avancÃ© et SolidWorks<br>
+                    • Obtenir un stage en électronique/domotique<br>
+                    • Maîtriser Python avancé et SolidWorks<br>
                     <strong>Long terme :</strong><br>
-                    â€¢ Fonder MHTech pour rÃ©volutionner l'agriculture intelligente</p>
+                    • Fonder MHTech pour révolutionner l'agriculture intelligente</p>
                 </div>
             </div>
 
-            <h3 style="margin-top: 3rem; color: var(--primary-color);">CompÃ©tences Techniques DÃ©taillÃ©es</h3>
+            <h3 style="margin-top: 3rem; color: var(--primary-color);">Compétences Techniques Détaillées</h3>
             <div class="cv-skills-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin: 2rem 0;">
                 <div style="background: rgba(0,255,157,0.08); padding: 1.2rem; border-radius: 8px; border-left: 4px solid var(--primary-color);">
-                    <h5 style="color: var(--secondary-color); margin-bottom: 0.5rem;">âš™ï¸ Ã‰lectronique</h5>
+                    <h5 style="color: var(--secondary-color); margin-bottom: 0.5rem;">⚙️ Électronique</h5>
                     <ul style="font-size: 0.95rem; list-style: none; line-height: 1.8;">
-                        <li>âœ“ Arduino & MicrocontrÃ´leurs</li>
-                        <li>âœ“ ESP32 & Raspberry Pi</li>
-                        <li>âœ“ Capteurs & Actionneurs</li>
-                        <li>âœ“ Conception de circuits</li>
+                        <li>✓ Arduino & Microcontrôleurs</li>
+                        <li>✓ ESP32 & Raspberry Pi</li>
+                        <li>✓ Capteurs & Actionneurs</li>
+                        <li>✓ Conception de circuits</li>
                     </ul>
                 </div>
                 <div style="background: rgba(0,136,255,0.08); padding: 1.2rem; border-radius: 8px; border-left: 4px solid var(--secondary-color);">
-                    <h5 style="color: var(--primary-color); margin-bottom: 0.5rem;">ðŸ’» Programmation</h5>
+                    <h5 style="color: var(--primary-color); margin-bottom: 0.5rem;">💻 Programmation</h5>
                     <ul style="font-size: 0.95rem; list-style: none; line-height: 1.8;">
-                        <li>âœ“ Python (AvancÃ©)</li>
-                        <li>âœ“ Kivy (UI/UX)</li>
-                        <li>âœ“ Java & JavaFX</li>
-                        <li>âœ“ HTML/CSS/JavaScript</li>
+                        <li>✓ Python (Avancé)</li>
+                        <li>✓ Kivy (UI/UX)</li>
+                        <li>✓ Java & JavaFX</li>
+                        <li>✓ HTML/CSS/JavaScript</li>
                     </ul>
                 </div>
                 <div style="background: rgba(255,0,255,0.08); padding: 1.2rem; border-radius: 8px; border-left: 4px solid var(--accent-color);">
-                    <h5 style="color: var(--accent-color); margin-bottom: 0.5rem;">ðŸ¤– IoT & Automatisation</h5>
+                    <h5 style="color: var(--accent-color); margin-bottom: 0.5rem;">🤖 IoT & Automatisation</h5>
                     <ul style="font-size: 0.95rem; list-style: none; line-height: 1.8;">
-                        <li>âœ“ Domotique</li>
-                        <li>âœ“ Drones</li>
-                        <li>âœ“ SystÃ¨mes autonomes</li>
-                        <li>âœ“ Communication WiFi/BLE</li>
+                        <li>✓ Domotique</li>
+                        <li>✓ Drones</li>
+                        <li>✓ Systèmes autonomes</li>
+                        <li>✓ Communication WiFi/BLE</li>
                     </ul>
                 </div>
                 <div style="background: rgba(0,255,157,0.08); padding: 1.2rem; border-radius: 8px; border-left: 4px solid var(--primary-color);">
-                    <h5 style="color: var(--secondary-color); margin-bottom: 0.5rem;">ðŸ“ ModÃ©lisation 3D</h5>
+                    <h5 style="color: var(--secondary-color); margin-bottom: 0.5rem;">📐 Modélisation 3D</h5>
                     <ul style="font-size: 0.95rem; list-style: none; line-height: 1.8;">
-                        <li>âœ“ SolidWorks (DÃ©butant)</li>
-                        <li>âœ“ CAO 3D</li>
-                        <li>âœ“ Conception de piÃ¨ces</li>
-                        <li>âœ“ Impression 3D</li>
+                        <li>✓ SolidWorks (Débutant)</li>
+                        <li>✓ CAO 3D</li>
+                        <li>✓ Conception de pièces</li>
+                        <li>✓ Impression 3D</li>
                     </ul>
                 </div>
             </div>
 
-            <h3 style="margin-top: 3rem; color: var(--primary-color); text-align: center;">ðŸ“„ TÃ©lÃ©charger mon CV complet</h3>
+            <h3 style="margin-top: 3rem; color: var(--primary-color); text-align: center;">📄 Télécharger mon CV complet</h3>
             <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem;">
                 <a href="https://drive.google.com/file/d/1EuMzYNn87DcrApnRFhvIYw1_KDOEHARG/view?usp=sharing" target="_blank" class="cv-download-btn">
-                    <i class="fas fa-download"></i> TÃ©lÃ©charger mon CV (Google Drive)
+                    <i class="fas fa-download"></i> Télécharger mon CV (Google Drive)
                 </a>
                 <button onclick="downloadCVJSON()" class="cv-download-btn" style="background: linear-gradient(90deg, var(--secondary-color), var(--primary-color)); cursor: pointer;">
                     <i class="fas fa-file-code"></i> Exporter en JSON
@@ -2601,7 +2601,7 @@
                         <i class="fas fa-phone"></i>
                     </div>
                     <div>
-                        <h4>TÃ©lÃ©phone</h4>
+                        <h4>Téléphone</h4>
                         <p>+226 76320088</p>
                     </div>
                 </div>
@@ -2610,9 +2610,9 @@
                         <i class="fas fa-graduation-cap"></i>
                     </div>
                     <div>
-                        <h4>Ã‰ducation</h4>
-                        <p>Ã‰lectronique & Informatique Industrielle</p>
-                        <p>3Ã¨me annÃ©e, IST Ouagadougou</p>
+                        <h4>Éducation</h4>
+                        <p>Électronique & Informatique Industrielle</p>
+                        <p>3ème année, IST Ouagadougou</p>
                     </div>
                 </div>
             </div>
@@ -2641,7 +2641,7 @@
         </div>
     </section>
 
-    <!-- Section PrÃ©sence en ligne -->
+    <!-- Section Présence en ligne -->
     <section id="online" class="online-section">
         <div class="section-title">
             <h2>Me retrouver en ligne</h2>
@@ -2653,7 +2653,7 @@
             </a>
             <a class="online-link" href="https://www.linkedin.com/in/moctar-hassane-sawadogo-18828b344" target="_blank" rel="noopener noreferrer">
                 <i class="fab fa-linkedin-in" aria-hidden="true"></i>
-                <span><strong>LinkedIn</strong><span>Profil professionnel vÃ©rifiÃ©</span></span>
+                <span><strong>LinkedIn</strong><span>Profil professionnel vérifié</span></span>
             </a>
         </div>
     </section>
@@ -2668,10 +2668,10 @@
                 <i class="fab fa-linkedin-in"></i>
             </a>
         </div>
-        <p class="copyright">Â© 2023 Sawadogo Moctar Hassane. Tous droits rÃ©servÃ©s. Portfolio d'un passionnÃ© d'Ã©lectronique et d'informatique industrielle.</p>
+        <p class="copyright">© 2023 Sawadogo Moctar Hassane. Tous droits réservés. Portfolio d'un passionné d'électronique et d'informatique industrielle.</p>
         <div class="mhtech-badge">
             <h4>Vision MHTech</h4>
-            <p>RÃ©volutionner l'agriculture intelligente et la domotique en Afrique</p>
+            <p>Révolutionner l'agriculture intelligente et la domotique en Afrique</p>
         </div>
     </footer>
 
@@ -2691,31 +2691,31 @@
                 </div>
             </div>
             <div class="chatbot-settings" id="chatbotSettings">
-                <h4 style="color: var(--primary-color); margin-bottom: 0.8rem;">âš™ï¸ Configuration Serveur</h4>
+                <h4 style="color: var(--primary-color); margin-bottom: 0.8rem;">⚙️ Configuration Serveur</h4>
                 
-                <label for="geminiModel">ðŸ¤– ModÃ¨le Gemini</label>
+                <label for="geminiModel">🤖 Modèle Gemini</label>
                 <select id="geminiModel">
-                    <option value="gemini-2.0-flash">âœ¨ Gemini 2.0 Flash (RecommandÃ©)</option>
-                    <option value="gemini-1.5-pro">ðŸš€ Gemini 1.5 Pro</option>
-                    <option value="gemini-1.5-flash">âš¡ Gemini 1.5 Flash</option>
+                    <option value="gemini-2.0-flash">✨ Gemini 2.0 Flash (Recommandé)</option>
+                    <option value="gemini-1.5-pro">🚀 Gemini 1.5 Pro</option>
+                    <option value="gemini-1.5-flash">⚡ Gemini 1.5 Flash</option>
                 </select>
                 
-                <button class="save-btn" id="saveGeminiSettings" style="margin-top: 0.8rem; background: linear-gradient(90deg, var(--primary-color), var(--secondary-color)); border: none; padding: 0.6rem 1rem; border-radius: 4px; cursor: pointer; color: var(--darker-bg); font-weight: bold;">ðŸ’¾ Enregistrer</button>
+                <button class="save-btn" id="saveGeminiSettings" style="margin-top: 0.8rem; background: linear-gradient(90deg, var(--primary-color), var(--secondary-color)); border: none; padding: 0.6rem 1rem; border-radius: 4px; cursor: pointer; color: var(--darker-bg); font-weight: bold;">💾 Enregistrer</button>
                 
                 <hr style="border: 1px solid rgba(0,255,157,0.2); margin: 1rem 0;">
                 
                 <p style="font-size: 0.8rem; color: rgba(224,240,255,0.8); line-height: 1.5;">
-                    <strong>âœ… Serveur SÃ©curisÃ© ConfigurÃ©</strong><br>
-                    La clÃ© API est stockÃ©e de maniÃ¨re sÃ©curisÃ©e sur le serveur.<br><br>
-                    <strong>ðŸ“‹ Pour utiliser :</strong><br>
-                    1. Configurez .env avec votre clÃ©<br>
+                    <strong>✅ Serveur Sécurisé Configuré</strong><br>
+                    La clé API est stockée de manière sécurisée sur le serveur.<br><br>
+                    <strong>📋 Pour utiliser :</strong><br>
+                    1. Configurez .env avec votre clé<br>
                     2. Lancez: <code style="background: rgba(0,0,0,0.3); padding: 0.2rem 0.4rem; border-radius: 3px;">npm install</code><br>
                     3. Lancez: <code style="background: rgba(0,0,0,0.3); padding: 0.2rem 0.4rem; border-radius: 3px;">npm start</code>
                 </p>
             </div>
             <div class="chatbot-messages" id="chatbotMessages">
                 <div class="message bot-message">
-                    Bonjour ! Je suis votre assistant MHTech. Comment puis-je vous renseigner sur mes compÃ©tences, projets ou ambitions ?
+                    Bonjour ! Je suis votre assistant MHTech. Comment puis-je vous renseigner sur mes compétences, projets ou ambitions ?
                 </div>
             </div>
             <div class="chatbot-input">
@@ -2731,32 +2731,32 @@
     </div>
 
     <script>
-        // CrÃ©er l'arriÃ¨re-plan avec dÃ©filement de 0 et 1
+        // Créer l'arrière-plan avec défilement de 0 et 1
         const binaryBackground = document.getElementById('binaryBackground');
-        // augmenter la densitÃ© : colonnes plus nombreuses et caractÃ¨res plus gros
+        // augmenter la densité : colonnes plus nombreuses et caractères plus gros
         const columnsCount = Math.floor(window.innerWidth / 12);
         
         for (let i = 0; i < columnsCount; i++) {
             const column = document.createElement('div');
             column.classList.add('binary-column');
             
-            // Position alÃ©atoire
+            // Position aléatoire
             column.style.left = `${(i * 20) + Math.random() * 10}px`;
             
-            // Vitesse d'animation alÃ©atoire
+            // Vitesse d'animation aléatoire
             const duration = 10 + Math.random() * 20;
             column.style.animationDuration = `${duration}s`;
             
-            // DÃ©lai alÃ©atoire
+            // Délai aléatoire
             column.style.animationDelay = `${Math.random() * 5}s`;
             
-            // GÃ©nÃ©rer des 0 et 1 alÃ©atoires (plus dense)
+            // Générer des 0 et 1 aléatoires (plus dense)
             let binaryContent = '';
             const rows = Math.floor(window.innerHeight / 18);
             for (let j = 0; j < rows; j++) {
-                // 85% de chance d'afficher un caractÃ¨re, 15% d'espace pour densitÃ©
+                // 85% de chance d'afficher un caractère, 15% d'espace pour densité
                 if (Math.random() > 0.15) {
-                    // intensifier les '0' et '1' â€” bias vers 1 et 0 alternativement
+                    // intensifier les '0' et '1' — bias vers 1 et 0 alternativement
                     binaryContent += Math.random() > 0.45 ? '1' : '0';
                 } else {
                     binaryContent += ' ';
@@ -2785,7 +2785,7 @@
             particlesContainer.appendChild(particle);
         }
 
-        // Re-crÃ©er les colonnes lors du redimensionnement pour garder la densitÃ©
+        // Re-créer les colonnes lors du redimensionnement pour garder la densité
         window.addEventListener('resize', () => {
             while (binaryBackground.firstChild) binaryBackground.removeChild(binaryBackground.firstChild);
             const newCount = Math.floor(window.innerWidth / 12);
@@ -2823,10 +2823,10 @@
                 : '<i class="fas fa-bars"></i>';
         });
         
-        // Mise Ã  jour de la navigation active au dÃ©filement
+        // Mise à jour de la navigation active au défilement
         window.addEventListener('scroll', () => {
             const sections = document.querySelectorAll('section');
-            const scrollPos = window.scrollY + 150; // AugmentÃ© pour meilleure dÃ©tection
+            const scrollPos = window.scrollY + 150; // Augmenté pour meilleure détection
             
             // D'abord, enlever active de tous les liens
             navLinksArray.forEach(link => link.classList.remove('active'));
@@ -2901,7 +2901,7 @@
         function updateCarousel() {
             carouselContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
             
-            // Mettre Ã  jour les indicateurs
+            // Mettre à jour les indicateurs
             indicators.forEach((indicator, index) => {
                 if (index === currentSlide) {
                     indicator.classList.add('active');
@@ -2926,17 +2926,17 @@
             });
         });
         
-        // Souris interactive amÃ©liorÃ©e avec auto-scroll
+        // Souris interactive améliorée avec auto-scroll
         const interactiveMouse = document.getElementById('interactiveMouse');
         let autoScrolling = false;
         let autoScrollInterval = null;
-        const scrollSpeed = 6; // pixels par frame (modifier pour ajuster la vitesse) - AUGMENTÃ‰ pour plus de rapiditÃ©
+        const scrollSpeed = 6; // pixels par frame (modifier pour ajuster la vitesse) - AUGMENTÉ pour plus de rapidité
         
         interactiveMouse.addEventListener('click', () => {
             autoScrolling = !autoScrolling;
             
             if (autoScrolling) {
-                // DÃ©marrer le dÃ©filement automatique
+                // Démarrer le défilement automatique
                 interactiveMouse.style.opacity = '0.8';
                 interactiveMouse.innerHTML = '<i class="fas fa-pause"></i>'; // Afficher pause icon
                 
@@ -2946,16 +2946,16 @@
                         behavior: 'auto'
                     });
                     
-                    // ArrÃªter si on arrive Ã  la fin
+                    // Arrêter si on arrive à la fin
                     if (window.scrollY >= document.documentElement.scrollHeight - window.innerHeight) {
                         autoScrolling = false;
                         clearInterval(autoScrollInterval);
                         interactiveMouse.style.opacity = '1';
                         interactiveMouse.innerHTML = '<i class="fas fa-arrow-down"></i>';
                     }
-                }, 30); // ~33 FPS pour fluiditÃ©
+                }, 30); // ~33 FPS pour fluidité
             } else {
-                // ArrÃªter le dÃ©filement
+                // Arrêter le défilement
                 clearInterval(autoScrollInterval);
                 interactiveMouse.style.opacity = '1';
                 interactiveMouse.innerHTML = '<i class="fas fa-arrow-down"></i>';
@@ -2973,7 +2973,7 @@
             interactiveMouse.style.boxShadow = '0 0 20px var(--primary-color)';
         });
         
-        // Chatbot optimisÃ© "YÃ´lsÃ©e"
+        // Chatbot optimisé "Yôlsée"
         const chatbotBtn = document.getElementById('chatbotBtn');
         const chatbotWindow = document.getElementById('chatbotWindow');
         const closeChatbot = document.getElementById('closeChatbot');
@@ -2981,9 +2981,9 @@
         const chatbotInput = document.getElementById('chatbotInput');
         const chatbotMessages = document.getElementById('chatbotMessages');
         
-        // VÃ©rifier que les Ã©lÃ©ments sont prÃ©sents
+        // Vérifier que les éléments sont présents
         if (!chatbotBtn || !chatbotWindow || !closeChatbot || !sendMessageBtn || !chatbotInput || !chatbotMessages) {
-            console.warn('âš ï¸ Certains Ã©lÃ©ments du chatbot sont manquants:', {
+            console.warn('⚠️ Certains éléments du chatbot sont manquants:', {
                 chatbotBtn: !!chatbotBtn,
                 chatbotWindow: !!chatbotWindow,
                 closeChatbot: !!closeChatbot,
@@ -2993,52 +2993,52 @@
             });
         }
         
-        // Mettre Ã  jour le nom du chatbot
+        // Mettre à jour le nom du chatbot
         const chatbotTitle = chatbotWindow ? chatbotWindow.querySelector('.chatbot-header h3') : null;
         if (chatbotTitle) {
-            chatbotTitle.textContent = 'ðŸ¤– YÃ´lsÃ©e';
+            chatbotTitle.textContent = '🤖 Yôlsée';
         }
         
         // Optimisations de performance
-        const messageCache = new Map(); // Cache des rÃ©ponses
-        const messageQueue = []; // Queue pour Ã©viter les appels simultanÃ©s
+        const messageCache = new Map(); // Cache des réponses
+        const messageQueue = []; // Queue pour éviter les appels simultanés
         
         chatbotBtn.addEventListener('click', () => {
-            console.log('ðŸ’¬ Chatbot button clicked - current display:', chatbotWindow.style.display);
+            console.log('💬 Chatbot button clicked - current display:', chatbotWindow.style.display);
             
             if (chatbotWindow.style.display === 'none' || chatbotWindow.style.display === '') {
                 // Ouvrir le chatbot avec animation
-                console.log('âž¡ï¸ Ouverture du chatbot...');
+                console.log('➡️ Ouverture du chatbot...');
                 chatbotWindow.style.display = 'flex';
                 // Forcer le reflow pour que la transition fonctionne
                 void chatbotWindow.offsetWidth;
                 chatbotWindow.classList.add('active');
                 chatbotInput.focus();
-                console.log('âœ… Chatbot ouvert');
+                console.log('✅ Chatbot ouvert');
             } else {
                 // Fermer le chatbot avec animation
-                console.log('â¬…ï¸ Fermeture du chatbot...');
+                console.log('⬅️ Fermeture du chatbot...');
                 chatbotWindow.classList.remove('active');
                 setTimeout(() => {
                     chatbotWindow.style.display = 'none';
-                    console.log('âœ… Chatbot fermÃ©');
+                    console.log('✅ Chatbot fermé');
                 }, 400); // Attendre la fin de l'animation
             }
         });
         
         closeChatbot.addEventListener('click', () => {
-            console.log('ðŸ”´ Close button clicked');
+            console.log('🔴 Close button clicked');
             chatbotWindow.classList.remove('active');
             setTimeout(() => {
                 chatbotWindow.style.display = 'none';
-                console.log('âœ… Chatbot closed via button');
+                console.log('✅ Chatbot closed via button');
             }, 400);
         });
         
         // Fermer le chatbot sur ESC
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape') {
-                console.log('âŒ¨ï¸ Escape pressed - closing chatbot');
+                console.log('⌨️ Escape pressed - closing chatbot');
                 chatbotWindow.classList.remove('active');
                 setTimeout(() => {
                     chatbotWindow.style.display = 'none';
@@ -3051,7 +3051,7 @@
             if (chatbotWindow && chatbotWindow.style.display === 'flex' && 
                 !chatbotWindow.contains(e.target) && 
                 !chatbotBtn.contains(e.target)) {
-                console.log('ðŸ‘† Click outside - closing chatbot');
+                console.log('👆 Click outside - closing chatbot');
                 chatbotWindow.classList.remove('active');
                 setTimeout(() => {
                     chatbotWindow.style.display = 'none';
@@ -3059,55 +3059,55 @@
             }
         });
         
-        // RÃ©ponses du chatbot personnalisÃ©es
+        // Réponses du chatbot personnalisées
         const botResponses = {
-            "bonjour": "Bonjour ! Je suis YÃ´lsÃ©e, l'assistant IA de Moctar Hassane. Comment puis-je vous aider ?",
-            "yo": "Yo ! PrÃªt Ã  discuter ? ðŸ˜Š",
-            "salut": "Salut ! Posez-moi des questions sur les compÃ©tences, projets ou ambitions de Moctar.",
-            "hello": "Hello! Je suis YÃ´lsÃ©e. Qu'aimeriez-vous savoir ?",
-            "hi": "Hi there! ðŸ‘‹ Que puis-je faire pour vous ?",
-            "projets": "ðŸš€ Projets rÃ©alisÃ©s : 1) ContrÃ´le voiture ESP32, 2) Drone agricole intelligent, 3) Pisciculture automatisÃ©e, 4) Robot Ã©boueur, 5) App IMC. Lequel ?",
-            "projet": "Quel projet vous intÃ©resse ? Drone ðŸš, domotique ðŸ , Ã©lectronique âš¡, ou autre ?",
-            "compÃ©tences": "ðŸ’» CompÃ©tences : Ã‰lectronique (Arduino, ESP32, RPi), Python, Kivy, IoT, Domotique, CAO 3D.",
-            "skills": "ðŸ”§ Technical skills: Embedded electronics, Python programming, IoT, Home automation, 3D design.",
-            "electronique": "âš¡ Ã‰lectronique embarquÃ©e : Arduino, ESP32, Raspberry Pi, capteurs, automatisation.",
+            "bonjour": "Bonjour ! Je suis Yôlsée, l'assistant IA de Moctar Hassane. Comment puis-je vous aider ?",
+            "yo": "Yo ! Prêt à discuter ? 😊",
+            "salut": "Salut ! Posez-moi des questions sur les compétences, projets ou ambitions de Moctar.",
+            "hello": "Hello! Je suis Yôlsée. Qu'aimeriez-vous savoir ?",
+            "hi": "Hi there! 👋 Que puis-je faire pour vous ?",
+            "projets": "🚀 Projets réalisés : 1) Contrôle voiture ESP32, 2) Drone agricole intelligent, 3) Pisciculture automatisée, 4) Robot éboueur, 5) App IMC. Lequel ?",
+            "projet": "Quel projet vous intéresse ? Drone 🚁, domotique 🏠, électronique ⚡, ou autre ?",
+            "compétences": "💻 Compétences : Électronique (Arduino, ESP32, RPi), Python, Kivy, IoT, Domotique, CAO 3D.",
+            "skills": "🔧 Technical skills: Embedded electronics, Python programming, IoT, Home automation, 3D design.",
+            "electronique": "⚡ Électronique embarquée : Arduino, ESP32, Raspberry Pi, capteurs, automatisation.",
             "embedded": "Specialized in embedded electronics and microcontroller programming.",
-            "informatique": "ðŸ’» Informatique : Python (avancÃ©), Kivy (UI), Java/JavaFX, interfaces graphiques.",
+            "informatique": "💻 Informatique : Python (avancé), Kivy (UI), Java/JavaFX, interfaces graphiques.",
             "programming": "Python expert, Kivy for modern apps, Java/JavaFX development.",
-            "domotique": "ðŸ  Domotique : SystÃ¨mes maison intelligente avec ESP32, contrÃ´le Ã  distance automatisÃ©.",
+            "domotique": "🏠 Domotique : Systèmes maison intelligente avec ESP32, contrôle à distance automatisé.",
             "smart home": "Smart home systems with ESP32, remote automation, intelligent control.",
-            "drone": "ðŸš Drone agricole : Agriculture de prÃ©cision, dÃ©limitation parcelles, pulvÃ©risation intelligente.",
-            "agriculture": "ðŸŒ¾ Projets agricoles : drone de prÃ©cision, automatisation, innovations technologiques.",
-            "mhtech": "ðŸŒŸ MHTech : Future entreprise rÃ©volutionnant l'agriculture et domotique en Afrique.",
-            "stage": "ðŸ“š Recherche : Stage en Ã©lectronique, domotique ou dÃ©veloppement d'applications.",
-            "apprentice": "Actuellement en 3Ã¨me annÃ©e d'Ã©tudes, ouvert Ã  collaborations et opportunitÃ©s.",
-            "contact": "ðŸ“§ Contact : email contact@mhtech.bf ou formulaire de contact du portfolio.",
-            "email": "contact@mhtech.bf - N'hÃ©sitez pas Ã  me contacter !",
-            "burkina": "ðŸ‡§ðŸ‡« Burkina Faso, Bassinko, Ouagadougou. Fier de mon pays !",
-            "ouagadougou": "ðŸ“ Bassinko, Ouagadougou - Burkina Faso.",
-            "Ã©tudes": "ðŸŽ“ 3Ã¨me annÃ©e Ã‰lectronique & Informatique Industrielle Ã  l'IST, Ouagadougou.",
-            "ecole": "Institut des Sciences et Technologies (IST) - Formation en Ã©lectronique & informatique.",
-            "ambition": "ðŸŽ¯ CrÃ©er MHTech pour apporter des solutions innovantes Ã  l'agriculture et domotique.",
+            "drone": "🚁 Drone agricole : Agriculture de précision, délimitation parcelles, pulvérisation intelligente.",
+            "agriculture": "🌾 Projets agricoles : drone de précision, automatisation, innovations technologiques.",
+            "mhtech": "🌟 MHTech : Future entreprise révolutionnant l'agriculture et domotique en Afrique.",
+            "stage": "📚 Recherche : Stage en électronique, domotique ou développement d'applications.",
+            "apprentice": "Actuellement en 3ème année d'études, ouvert à collaborations et opportunités.",
+            "contact": "📧 Contact : email contact@mhtech.bf ou formulaire de contact du portfolio.",
+            "email": "contact@mhtech.bf - N'hésitez pas à me contacter !",
+            "burkina": "🇧🇫 Burkina Faso, Bassinko, Ouagadougou. Fier de mon pays !",
+            "ouagadougou": "📍 Bassinko, Ouagadougou - Burkina Faso.",
+            "études": "🎓 3ème année Électronique & Informatique Industrielle à l'IST, Ouagadougou.",
+            "ecole": "Institut des Sciences et Technologies (IST) - Formation en électronique & informatique.",
+            "ambition": "🎯 Créer MHTech pour apporter des solutions innovantes à l'agriculture et domotique.",
             "future": "Futur entrepreneur en tech, focus agriculture intelligente et domotique.",
-            "association": "ðŸ¤ Bureau association Ã©ducation entrepreneuriale, culturelle et sportive de Bassinko.",
-            "merci": "De rien ! ðŸ˜Š D'autres questions ?",
+            "association": "🤝 Bureau association éducation entrepreneuriale, culturelle et sportive de Bassinko.",
+            "merci": "De rien ! 😊 D'autres questions ?",
             "thanks": "Welcome! Ask me anything about Moctar's work.",
-            "yÃ´lsÃ©e": "C'est moi ! Je suis YÃ´lsÃ©e, l'assistant IA optimisÃ©. Comment aider ?",
-            "qui es-tu": "Je suis YÃ´lsÃ©e, l'assistant intelligent de Moctar. Performant et Ã  votre service! âš¡",
-            "help": "Je peux parler de : projets ðŸš€, compÃ©tences ðŸ’», domotique ðŸ , drone ðŸš, contact ðŸ“§.",
-            "aide": "Posez des questions sur : projets ðŸš€, compÃ©tences ðŸ’», domotique ðŸ , drone ðŸš, contact ðŸ“§."
+            "yôlsée": "C'est moi ! Je suis Yôlsée, l'assistant IA optimisé. Comment aider ?",
+            "qui es-tu": "Je suis Yôlsée, l'assistant intelligent de Moctar. Performant et à votre service! ⚡",
+            "help": "Je peux parler de : projets 🚀, compétences 💻, domotique 🏠, drone 🚁, contact 📧.",
+            "aide": "Posez des questions sur : projets 🚀, compétences 💻, domotique 🏠, drone 🚁, contact 📧."
         };
         
-        // Fonction optimisÃ©e avec cache et recherche intelligente
+        // Fonction optimisée avec cache et recherche intelligente
         function getBotResponse(userMessage) {
             const message = userMessage.toLowerCase().trim();
             
-            // VÃ©rifier le cache d'abord (optimisation)
+            // Vérifier le cache d'abord (optimisation)
             if (messageCache.has(message)) {
                 return messageCache.get(message);
             }
             
-            // Recherche par keywords avec prioritÃ© aux matches exacts
+            // Recherche par keywords avec priorité aux matches exacts
             let bestMatch = null;
             let bestMatchLength = 0;
             
@@ -3125,12 +3125,12 @@
                 return bestMatch;
             }
             
-            const defaultResponse = "ðŸ¤” Je ne suis pas sÃ»r... Posez-moi une question sur : projets ðŸš€, compÃ©tences ðŸ’», domotique ðŸ , drone ðŸš, Ã©tudes ðŸ“š, contact ðŸ“§, ou MHTech ðŸŒŸ !";
+            const defaultResponse = "🤔 Je ne suis pas sûr... Posez-moi une question sur : projets 🚀, compétences 💻, domotique 🏠, drone 🚁, études 📚, contact 📧, ou MHTech 🌟 !";
             messageCache.set(message, defaultResponse);
             return defaultResponse;
         }
         
-        // Fonction optimisÃ©e pour ajouter messages (utilise requestAnimationFrame pour meilleure perf)
+        // Fonction optimisée pour ajouter messages (utilise requestAnimationFrame pour meilleure perf)
         function addMessage(content, isUser = false) {
             const messageDiv = document.createElement('div');
             messageDiv.classList.add('message');
@@ -3156,20 +3156,20 @@
             const userMessage = chatbotInput.value.trim();
             if (!userMessage) return;
             
-            // DÃ©sactiver le bouton pour Ã©viter les clics multiples
+            // Désactiver le bouton pour éviter les clics multiples
             sendMessageBtn.disabled = true;
             
             addMessage(userMessage, true);
             chatbotInput.value = '';
             
-            // Indicateur de typage optimisÃ©
+            // Indicateur de typage optimisé
             const typing = document.createElement('div');
             typing.className = 'typing-indicator';
             typing.innerHTML = '<div class="typing-dot"></div><div class="typing-dot"></div><div class="typing-dot"></div>';
             chatbotMessages.appendChild(typing);
             chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
 
-            // Appeler le serveur sÃ©curisÃ©
+            // Appeler le serveur sécurisé
             const controller = new AbortController();
             const timeoutId = setTimeout(() => controller.abort(), 30000); // 30 sec timeout
             
@@ -3197,9 +3197,9 @@
                 if (data.success && data.response) {
                     addMessage(data.response, false);
                 } else if (data.error) {
-                    addMessage(`âš ï¸ ${data.error}\n\n${data.details || ''}`, false);
+                    addMessage(`⚠️ ${data.error}\n\n${data.details || ''}`, false);
                 } else {
-                    addMessage('DÃ©solÃ©, pas de rÃ©ponse disponible.', false);
+                    addMessage('Désolé, pas de réponse disponible.', false);
                 }
                 sendMessageBtn.disabled = false;
             })
@@ -3208,18 +3208,18 @@
                 typing.remove();
                 
                 if (err.name === 'AbortError') {
-                    addMessage('âŒ DÃ©lai d\'attente dÃ©passÃ©. VÃ©rifiez que le serveur est dÃ©marrÃ©.', false);
+                    addMessage('❌ Délai d\'attente dépassé. Vérifiez que le serveur est démarré.', false);
                 } else if (err.message.includes('Failed to fetch')) {
-                    addMessage('âŒ Impossible de se connecter au serveur.\n\nAssurez-vous que:\n1. Le serveur Node.js est dÃ©marrÃ©\n2. Vous Ãªtes sur http://localhost (pas https)', false);
+                    addMessage('❌ Impossible de se connecter au serveur.\n\nAssurez-vous que:\n1. Le serveur Node.js est démarré\n2. Vous êtes sur http://localhost (pas https)', false);
                 } else {
                     const botResponse = getBotResponse(userMessage);
-                    addMessage(`âš ï¸ API indisponible - Mode local\n\n${botResponse}`, false);
+                    addMessage(`⚠️ API indisponible - Mode local\n\n${botResponse}`, false);
                 }
                 sendMessageBtn.disabled = false;
             });
         }
         
-        // Effets de dÃ©filement fluide pour les ancres
+        // Effets de défilement fluide pour les ancres
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
@@ -3237,7 +3237,7 @@
             });
         });
         
-        // Animation au dÃ©filement amÃ©liorÃ©e
+        // Animation au défilement améliorée
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
@@ -3249,7 +3249,7 @@
                     entry.target.style.opacity = '1';
                     entry.target.style.transform = 'translateY(0)';
                     
-                    // Animation supplÃ©mentaire pour les cartes
+                    // Animation supplémentaire pour les cartes
                     if (entry.target.classList.contains('flip-card')) {
                         entry.target.style.transitionDelay = `${Math.random() * 0.5}s`;
                     }
@@ -3257,7 +3257,7 @@
             });
         }, observerOptions);
         
-        // Observer les Ã©lÃ©ments pour les animations
+        // Observer les éléments pour les animations
         document.querySelectorAll('section, .flip-card, .project-card, .stat-item').forEach(element => {
             element.style.opacity = '0';
             element.style.transform = 'translateY(30px)';
@@ -3276,10 +3276,10 @@
         // Initialiser le carrousel
         updateCarousel();
         
-        // Simuler un message de bienvenue du chatbot aprÃ¨s 5 secondes
+        // Simuler un message de bienvenue du chatbot après 5 secondes
         setTimeout(() => {
             if (!chatbotWindow.style.display || chatbotWindow.style.display === 'none') {
-                addMessage("Bonjour ! Je suis Moctar Hassane, Ã©tudiant en Ã‰lectronique et Informatique Industrielle. Posez-moi des questions sur mes compÃ©tences, projets ou ambitions !", false);
+                addMessage("Bonjour ! Je suis Moctar Hassane, étudiant en Électronique et Informatique Industrielle. Posez-moi des questions sur mes compétences, projets ou ambitions !", false);
             }
         }, 5000);
         
@@ -3290,11 +3290,11 @@
         let emailjsInitialized = false;
         let emailjsReady = false;
         
-        // Attendre que le script EmailJS soit chargÃ©
+        // Attendre que le script EmailJS soit chargé
         function waitForEmailJS() {
             return new Promise((resolve) => {
                 let attempts = 0;
-                const maxAttempts = 50; // 5 secondes (50 Ã— 100ms)
+                const maxAttempts = 50; // 5 secondes (50 × 100ms)
                 
                 const checkEmailJS = setInterval(() => {
                     if (typeof emailjs !== 'undefined') {
@@ -3303,15 +3303,15 @@
                             emailjs.init('6E9I8-XvW1LL3_7Fx');
                             emailjsInitialized = true;
                             emailjsReady = true;
-                            console.log('âœ“ EmailJS initialisÃ© avec succÃ¨s');
+                            console.log('✓ EmailJS initialisé avec succès');
                             resolve(true);
                         } catch (error) {
-                            console.warn('âš ï¸ Erreur lors de l\'initialisation d\'EmailJS:', error);
+                            console.warn('⚠️ Erreur lors de l\'initialisation d\'EmailJS:', error);
                             resolve(false);
                         }
                     } else if (attempts >= maxAttempts) {
                         clearInterval(checkEmailJS);
-                        console.warn('âš ï¸ EmailJS n\'a pas pu Ãªtre chargÃ© aprÃ¨s 5 secondes');
+                        console.warn('⚠️ EmailJS n\'a pas pu être chargé après 5 secondes');
                         resolve(false);
                     }
                     attempts++;
@@ -3322,16 +3322,16 @@
         // Initialiser EmailJS au chargement
         waitForEmailJS().then(success => {
             if (success) {
-                console.info('âœ“ Service d\'email disponible');
+                console.info('✓ Service d\'email disponible');
             } else {
-                console.warn('âš ï¸ Service d\'email indisponible - utilisation du fallback');
+                console.warn('⚠️ Service d\'email indisponible - utilisation du fallback');
             }
         });
         
         function sendEmail(event) {
             event.preventDefault();
             
-            // Valider et nettoyer les donnÃ©es du formulaire
+            // Valider et nettoyer les données du formulaire
             const nameInput = document.getElementById('name');
             const emailInput = document.getElementById('email');
             const subjectInput = document.getElementById('subject');
@@ -3343,23 +3343,23 @@
             const subject = validateInput(subjectInput.value, 'text');
             const message = validateInput(messageInput.value, 'text');
             
-            // VÃ©rifier que les champs ne sont pas vides aprÃ¨s validation
+            // Vérifier que les champs ne sont pas vides après validation
             if (!name || !email || !subject || !message) {
-                alert('âŒ Erreur : Veuillez remplir correctement tous les champs.');
+                alert('❌ Erreur : Veuillez remplir correctement tous les champs.');
                 nameInput.focus();
                 return;
             }
             
-            // Enregistrer l'Ã©vÃ©nement de sÃ©curitÃ©
+            // Enregistrer l'événement de sécurité
             logSecurityEvent('form_submission', { form: 'contact', timestamp: new Date().toISOString() });
             
             // Montrer un indicateur de chargement
             const submitBtn = contactForm.querySelector('button[type="submit"]');
             const originalText = submitBtn.textContent;
-            submitBtn.textContent = 'â³ Envoi en cours...';
+            submitBtn.textContent = '⏳ Envoi en cours...';
             submitBtn.disabled = true;
             
-            // PrÃ©parer les donnÃ©es du formulaire
+            // Préparer les données du formulaire
             const templateParams = {
                 from_name: name,
                 reply_to: email,
@@ -3368,15 +3368,15 @@
                 to_email: 'contact@mhtech.bf'
             };
             
-            // VÃ©rifier si EmailJS est disponible
+            // Vérifier si EmailJS est disponible
             if (!emailjsReady || typeof emailjs === 'undefined') {
-                submitBtn.textContent = 'âš ï¸ Fallback activÃ©';
+                submitBtn.textContent = '⚠️ Fallback activé';
                 submitBtn.style.background = 'linear-gradient(90deg, #ff9500, #ffb700)';
                 
                 // Utiliser fallback : envoyer par FormSubmit ou email direct
-                console.log('ðŸ“§ Mode fallback activÃ© - utilisation de FormSubmit');
+                console.log('📧 Mode fallback activé - utilisation de FormSubmit');
                 
-                // CrÃ©er un formulaire temporaire pour FormSubmit
+                // Créer un formulaire temporaire pour FormSubmit
                 const fallbackForm = document.createElement('form');
                 fallbackForm.method = 'POST';
                 fallbackForm.action = 'https://formspree.io/f/moqzglbk';
@@ -3393,7 +3393,7 @@
                 fallbackForm.submit();
                 
                 setTimeout(() => {
-                    submitBtn.textContent = 'âœ… Message envoyÃ© (fallback) !';
+                    submitBtn.textContent = '✅ Message envoyé (fallback) !';
                     submitBtn.style.background = 'linear-gradient(90deg, #00ff9d, #0088ff)';
                     contactForm.reset();
                     
@@ -3407,29 +3407,29 @@
                 return;
             }
             
-            // Envoyer l'email via EmailJS (mÃ©thode principale)
+            // Envoyer l'email via EmailJS (méthode principale)
             emailjs.send('service_mhtechnique', 'template_portfolio', templateParams)
                 .then((response) => {
-                    // SuccÃ¨s
-                    submitBtn.textContent = 'âœ… Message envoyÃ© !';
+                    // Succès
+                    submitBtn.textContent = '✅ Message envoyé !';
                     submitBtn.style.background = 'linear-gradient(90deg, #00ff9d, #0088ff)';
                     contactForm.reset();
                     
-                    // Enregistrer l'Ã©vÃ©nement rÃ©ussi
+                    // Enregistrer l'événement réussi
                     logSecurityEvent('email_sent_success', { response_id: response.status });
                     
-                    // RÃ©initialiser aprÃ¨s 3 secondes
+                    // Réinitialiser après 3 secondes
                     setTimeout(() => {
                         submitBtn.textContent = originalText;
                         submitBtn.style.background = '';
                         submitBtn.disabled = false;
                     }, 3000);
                     
-                    console.log('âœ“ Email envoyÃ© avec succÃ¨s !', response);
+                    console.log('✓ Email envoyé avec succès !', response);
                 }, (error) => {
                     // Erreur EmailJS - utiliser fallback
-                    console.warn('âš ï¸ Erreur EmailJS:', error);
-                    submitBtn.textContent = 'âš ï¸ Fallback activÃ©';
+                    console.warn('⚠️ Erreur EmailJS:', error);
+                    submitBtn.textContent = '⚠️ Fallback activé';
                     submitBtn.style.background = 'linear-gradient(90deg, #ff9500, #ffb700)';
                     
                     // Enregistrer l'erreur
@@ -3450,7 +3450,7 @@
                     fallbackForm.submit();
                     
                     setTimeout(() => {
-                        submitBtn.textContent = 'âœ… Message envoyÃ© (fallback) !';
+                        submitBtn.textContent = '✅ Message envoyé (fallback) !';
                         submitBtn.style.background = 'linear-gradient(90deg, #00ff9d, #0088ff)';
                         contactForm.reset();
                         
@@ -3464,7 +3464,7 @@
                 });
         }
 
-        // --- ThÃ¨me (sombre/clair) et langue (FR/EN) ---
+        // --- Thème (sombre/clair) et langue (FR/EN) ---
         const themeToggle = document.getElementById('themeToggle');
         const langToggle = document.getElementById('langToggle');
 
@@ -3472,7 +3472,7 @@
         const translations = {
             en: {
                 'Accueil': 'Home',
-                'Ã€ propos': 'About',
+                'À propos': 'About',
                 'Expertise': 'Skills',
                 'Projets': 'Projects',
                 'Galerie': 'Gallery',
@@ -3484,7 +3484,7 @@
                 'Attestations & Formations': 'Certificates & Trainings',
                 'Voir mes projets': 'See my projects',
                 'Me contacter': 'Contact me',
-                'Ã€ propos de moi': 'About me',
+                'À propos de moi': 'About me',
                 'Me retrouver en ligne': 'Find me online',
                 'Mon Expertise Technique': 'My Technical Expertise',
                 'Mes Projets': 'My Projects',
@@ -3506,7 +3506,7 @@
             originalTexts['h2_' + i] = {el: h, text: h.textContent.trim()};
         });
 
-        // Fonction pour appliquer le thÃ¨me
+        // Fonction pour appliquer le thème
         function applyTheme(theme) {
             if (theme === 'light') {
                 document.body.classList.add('light');
@@ -3518,7 +3518,7 @@
             } catch (e) {
                 console.warn('localStorage indisponible:', e);
             }
-            console.log('ThÃ¨me appliquÃ©:', theme);
+            console.log('Thème appliqué:', theme);
         }
 
         // Fonction pour appliquer la langue
@@ -3535,10 +3535,10 @@
             } catch (e) {
                 console.warn('localStorage indisponible:', e);
             }
-            console.log('Langue appliquÃ©e:', lang);
+            console.log('Langue appliquée:', lang);
         }
 
-        // Mettre Ã  jour l'apparence des boutons
+        // Mettre à jour l'apparence des boutons
         function updateButtonStates() {
             const isLight = document.body.classList.contains('light');
             let currentLang = 'fr';
@@ -3577,14 +3577,14 @@
             savedTheme = localStorage.getItem('mh_theme') || 'dark';
             savedLang = localStorage.getItem('mh_lang') || 'fr';
         } catch (e) {
-            console.warn('localStorage indisponible lors de la rÃ©cupÃ©ration des prÃ©fÃ©rences:', e);
+            console.warn('localStorage indisponible lors de la récupération des préférences:', e);
         }
         
         applyTheme(savedTheme);
         applyLanguage(savedLang);
         updateButtonStates();
 
-        // Ajouter les Ã©couteurs d'Ã©vÃ©nements
+        // Ajouter les écouteurs d'événements
         if (themeToggle) {
             themeToggle.addEventListener('click', (e) => {
                 e.preventDefault();
@@ -3663,7 +3663,7 @@
                     chatStatus.classList.add('online');
                 }
                 
-                alert('âœ… ModÃ¨le Gemini enregistrÃ©: ' + model);
+                alert('✅ Modèle Gemini enregistré: ' + model);
                 chatbotSettings.style.display = 'none';
             });
         }
@@ -3675,59 +3675,59 @@
             }
         });
 
-        // ========== FONCTIONS DE TÃ‰LÃ‰CHARGEMENT CV ==========
+        // ========== FONCTIONS DE TÉLÉCHARGEMENT CV ==========
         
-        // DonnÃ©es du CV en JSON
+        // Données du CV en JSON
         const cvData = {
             fullName: "Sawadogo Moctar Hassane",
-            title: "Ã‰tudiant | Ã‰lectronique & Informatique Industrielle",
+            title: "Étudiant | Électronique & Informatique Industrielle",
             email: "contact@mhtech.bf",
             phone: "+226 76320088",
             location: "Bassinko, Ouagadougou, Burkina Faso",
-            summary: "Ã‰tudiant passionnÃ© en 3Ã¨me annÃ©e d'Ã‰lectronique et Informatique Industrielle Ã  l'IST, spÃ©cialisÃ© dans l'Ã©lectronique embarquÃ©e, la domotique, les drones agricoles et le dÃ©veloppement d'applications innovantes. Futur fondateur de MHTech.",
+            summary: "Étudiant passionné en 3ème année d'Électronique et Informatique Industrielle à l'IST, spécialisé dans l'électronique embarquée, la domotique, les drones agricoles et le développement d'applications innovantes. Futur fondateur de MHTech.",
             education: [
                 {
                     school: "Institut des Sciences et Technologies (IST)",
-                    degree: "Licence en Ã‰lectronique et Informatique Industrielle",
-                    year: "2024 - En cours (3Ã¨me annÃ©e)",
+                    degree: "Licence en Électronique et Informatique Industrielle",
+                    year: "2024 - En cours (3ème année)",
                     location: "Ouagadougou, Burkina Faso"
                 }
             ],
             skills: {
-                "Ã‰lectronique": ["Arduino", "ESP32", "Raspberry Pi", "Capteurs & Actionneurs", "Circuits Ã©lectroniques", "Prototypage"],
-                "Programmation": ["Python (AvancÃ©)", "Kivy (UI/UX)", "Java & JavaFX", "HTML/CSS/JavaScript"],
-                "IoT & Domotique": ["SystÃ¨mes intelligents", "Domotique", "Drones autonomes", "Communication WiFi/BLE", "Automatisation"],
-                "ModÃ©lisation 3D": ["SolidWorks", "CAO 3D", "Conception de piÃ¨ces", "Impression 3D"]
+                "Électronique": ["Arduino", "ESP32", "Raspberry Pi", "Capteurs & Actionneurs", "Circuits électroniques", "Prototypage"],
+                "Programmation": ["Python (Avancé)", "Kivy (UI/UX)", "Java & JavaFX", "HTML/CSS/JavaScript"],
+                "IoT & Domotique": ["Systèmes intelligents", "Domotique", "Drones autonomes", "Communication WiFi/BLE", "Automatisation"],
+                "Modélisation 3D": ["SolidWorks", "CAO 3D", "Conception de pièces", "Impression 3D"]
             },
             projects: [
                 {
-                    name: "ContrÃ´le de Voiture via ESP32",
-                    description: "SystÃ¨me de contrÃ´le Ã  distance d'un vÃ©hicule miniature avec retour vidÃ©o en temps rÃ©el",
+                    name: "Contrôle de Voiture via ESP32",
+                    description: "Système de contrôle à distance d'un véhicule miniature avec retour vidéo en temps réel",
                     technologies: ["ESP32", "Python", "IoT"]
                 },
                 {
                     name: "Drone Agricole Intelligent",
-                    description: "Drone autonome pour agriculture de prÃ©cision avec pulvÃ©risation intelligente",
+                    description: "Drone autonome pour agriculture de précision avec pulvérisation intelligente",
                     technologies: ["Drone", "Automatisation", "Python"]
                 },
                 {
-                    name: "SystÃ¨me Pisciculture + Jardinage AutomatisÃ©",
-                    description: "Plateforme d'aquaponie automatisÃ©e avec contrÃ´le par capteurs",
+                    name: "Système Pisciculture + Jardinage Automatisé",
+                    description: "Plateforme d'aquaponie automatisée avec contrôle par capteurs",
                     technologies: ["Arduino", "Capteurs", "Automatisation"]
                 },
                 {
-                    name: "Robot Ã‰boueur AutomatisÃ©",
-                    description: "Robot mobile pour collecte et tri automatique des dÃ©chets",
+                    name: "Robot Éboueur Automatisé",
+                    description: "Robot mobile pour collecte et tri automatique des déchets",
                     technologies: ["Robotique", "Arduino", "Navigation"]
                 },
                 {
-                    name: "SystÃ¨me Domotique Intelligent",
-                    description: "Plateforme complÃ¨te de gestion automatisÃ©e d'habitation",
+                    name: "Système Domotique Intelligent",
+                    description: "Plateforme complète de gestion automatisée d'habitation",
                     technologies: ["ESP32", "IoT", "Kivy"]
                 },
                 {
                     name: "Application de Calcul d'IMC",
-                    description: "Application moderne de suivi de santÃ© avec historique",
+                    description: "Application moderne de suivi de santé avec historique",
                     technologies: ["Python", "Kivy", "UI/UX"]
                 }
             ],
@@ -3738,18 +3738,18 @@
                 },
                 {
                     name: "Programmation Python",
-                    description: "Perfectionnement Python pour applications embarquÃ©es"
+                    description: "Perfectionnement Python pour applications embarquées"
                 },
                 {
                     name: "Drone Agricole",
-                    description: "Conception & pilotage de drones pour agriculture de prÃ©cision"
+                    description: "Conception & pilotage de drones pour agriculture de précision"
                 }
             ],
-            languages: ["FranÃ§ais (Natif)", "Anglais (IntermÃ©diaire)", "Bambara (Natif)"],
-            interests: "Innovation technologique, Agriculture intelligente, Entrepreneuriat, Robotique, Domotique, Ã‰ducation technologique"
+            languages: ["Français (Natif)", "Anglais (Intermédiaire)", "Bambara (Natif)"],
+            interests: "Innovation technologique, Agriculture intelligente, Entrepreneuriat, Robotique, Domotique, Éducation technologique"
         };
 
-        // Fonction pour tÃ©lÃ©charger le CV en PDF
+        // Fonction pour télécharger le CV en PDF
         function downloadCVPDF() {
             const element = document.createElement('div');
             element.style.padding = '20px';
@@ -3762,11 +3762,11 @@
                     <h1 style="margin: 0; color: #00ff9d;">${cvData.fullName}</h1>
                     <p style="margin: 5px 0; color: #0088ff; font-size: 16px;">${cvData.title}</p>
                     <p style="margin: 5px 0; font-size: 12px;">
-                        ðŸ“§ ${cvData.email} | ðŸ“± ${cvData.phone} | ðŸ“ ${cvData.location}
+                        📧 ${cvData.email} | 📱 ${cvData.phone} | 📍 ${cvData.location}
                     </p>
                 </div>
 
-                <h2 style="border-bottom: 3px solid #00ff9d; padding-bottom: 8px; color: #333;">Ã€ PROPOS</h2>
+                <h2 style="border-bottom: 3px solid #00ff9d; padding-bottom: 8px; color: #333;">À PROPOS</h2>
                 <p style="line-height: 1.6;">${cvData.summary}</p>
 
                 <h2 style="border-bottom: 3px solid #0088ff; padding-bottom: 8px; color: #333; margin-top: 20px;">FORMATION</h2>
@@ -3778,14 +3778,14 @@
                     </div>
                 `).join('')}
 
-                <h2 style="border-bottom: 3px solid #ff00ff; padding-bottom: 8px; color: #333; margin-top: 20px;">COMPÃ‰TENCES TECHNIQUES</h2>
+                <h2 style="border-bottom: 3px solid #ff00ff; padding-bottom: 8px; color: #333; margin-top: 20px;">COMPÉTENCES TECHNIQUES</h2>
                 ${Object.entries(cvData.skills).map(([category, skills]) => `
                     <div style="margin-bottom: 12px;">
                         <strong>${category}:</strong> ${skills.join(', ')}<br>
                     </div>
                 `).join('')}
 
-                <h2 style="border-bottom: 3px solid #00ff9d; padding-bottom: 8px; color: #333; margin-top: 20px;">PROJETS RÃ‰ALISÃ‰S</h2>
+                <h2 style="border-bottom: 3px solid #00ff9d; padding-bottom: 8px; color: #333; margin-top: 20px;">PROJETS RÉALISÉS</h2>
                 ${cvData.projects.map(proj => `
                     <div style="margin-bottom: 12px;">
                         <strong>${proj.name}</strong><br>
@@ -3802,12 +3802,12 @@
                     </div>
                 `).join('')}
 
-                <h2 style="border-bottom: 3px solid #ff00ff; padding-bottom: 8px; color: #333; margin-top: 20px;">LANGUES & INTÃ‰RÃŠTS</h2>
+                <h2 style="border-bottom: 3px solid #ff00ff; padding-bottom: 8px; color: #333; margin-top: 20px;">LANGUES & INTÉRÊTS</h2>
                 <p><strong>Langues:</strong> ${cvData.languages.join(', ')}<br>
-                <strong>IntÃ©rÃªts:</strong> ${cvData.interests}</p>
+                <strong>Intérêts:</strong> ${cvData.interests}</p>
 
                 <div style="margin-top: 30px; text-align: center; color: #999; font-size: 12px;">
-                    <p>GÃ©nÃ©rÃ© automatiquement depuis le portfolio MHTech | ${new Date().toLocaleDateString('fr-FR')}</p>
+                    <p>Généré automatiquement depuis le portfolio MHTech | ${new Date().toLocaleDateString('fr-FR')}</p>
                 </div>
             `;
             
@@ -3822,11 +3822,11 @@
             };
             
             html2pdf().set(opt).from(element).save().then(() => {
-                console.log('CV PDF tÃ©lÃ©chargÃ© avec succÃ¨s !');
+                console.log('CV PDF téléchargé avec succès !');
             });
         }
 
-        // Fonction pour tÃ©lÃ©charger le CV en JSON
+        // Fonction pour télécharger le CV en JSON
         function downloadCVJSON() {
             const jsonString = JSON.stringify(cvData, null, 2);
             const blob = new Blob([jsonString], { type: 'application/json' });

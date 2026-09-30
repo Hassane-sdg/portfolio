@@ -41,13 +41,13 @@
             margin: 0.5rem 0;
         }
         .checklist li:before {
-            content: "â˜ ";
+            content: "☐ ";
             color: #00ff9d;
             font-weight: bold;
             margin-right: 0.5rem;
         }
         .completed:before {
-            content: "âœ“ ";
+            content: "✓ ";
             color: #00ff9d;
         }
         .tip {
@@ -68,12 +68,12 @@
 </head>
 <body>
     <div class="container">
-        <h1>ðŸ“Š Guide d'Optimisation Performance - MHTech Portfolio</h1>
+        <h1>📊 Guide d'Optimisation Performance - MHTech Portfolio</h1>
 
-        <h2>âœ… Optimisations ImplÃ©mentÃ©es</h2>
+        <h2>✅ Optimisations Implémentées</h2>
         
         <h3>1. Design Responsive</h3>
-        <p>Points de rupture implÃ©mentÃ©s :</p>
+        <p>Points de rupture implémentés :</p>
         <ul class="checklist">
             <li class="completed">Desktop (1200px+)</li>
             <li class="completed">Tablette (768px - 1199px)</li>
@@ -81,7 +81,7 @@
             <li class="completed">Petit mobile (< 480px)</li>
         </ul>
 
-        <h3>2. Pages SÃ©parÃ©es</h3>
+        <h3>2. Pages Séparées</h3>
         <ul class="checklist">
             <li class="completed">Galerie : gallery.html (1.2 KB gzip)</li>
             <li class="completed">Blog : blog.html (1.8 KB gzip)</li>
@@ -91,10 +91,10 @@
 
         <h3>3. Modal/Lightbox</h3>
         <div class="tip">
-            <strong>âœ¨ Feature :</strong> Les images dans la galerie s'ouvrent en plein Ã©cran avec une modal lÃ©gÃ¨re, sans librairie externe.
+            <strong>✨ Feature :</strong> Les images dans la galerie s'ouvrent en plein écran avec une modal légère, sans librairie externe.
         </div>
 
-        <h2>ðŸš€ Recommandations d'Optimisation SupplÃ©mentaire</h2>
+        <h2>🚀 Recommandations d'Optimisation Supplémentaire</h2>
 
         <h3>1. Compression d'Images</h3>
         <pre>
@@ -105,7 +105,7 @@ mogrify -compress jpeg -quality 80 -resize 1920x1920 *.jpg
 https://tinypng.com/
         </pre>
         <div class="tip">
-            <strong>ðŸ’¡ Impact :</strong> RÃ©duire les images de 50-80% sans perte visible
+            <strong>💡 Impact :</strong> Réduire les images de 50-80% sans perte visible
         </div>
 
         <h3>2. Minification CSS/JS</h3>
@@ -127,18 +127,18 @@ csso style.css -o style.min.css
         </pre>
         <ul class="checklist">
             <li>Images se chargent seulement quand visibles</li>
-            <li>AmÃ©liore le temps de chargement initial</li>
+            <li>Améliore le temps de chargement initial</li>
         </ul>
 
         <h3>4. Service Worker (Progressive Web App)</h3>
         <pre>
-// CrÃ©er service-worker.js
+// Créer service-worker.js
 if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('service-worker.js');
 }
         </pre>
         <div class="warning">
-            <strong>âš ï¸ Note :</strong> Permet le fonctionnement hors-ligne (avancÃ©)
+            <strong>⚠️ Note :</strong> Permet le fonctionnement hors-ligne (avancé)
         </div>
 
         <h3>5. Cache HTTP Headers</h3>
@@ -153,7 +153,7 @@ if ('serviceWorker' in navigator) {
         </pre>
 
         <h3>6. CDN pour les Ressources</h3>
-        <p>DÃ©jÃ  implÃ©mentÃ© :</p>
+        <p>Déjà implémenté :</p>
         <ul class="checklist">
             <li class="completed">FontAwesome (CDN cloudflare)</li>
             <li class="completed">Google Fonts (CDN Google)</li>
@@ -174,24 +174,24 @@ if ('serviceWorker' in navigator) {
 
         <h3>8. Critical CSS</h3>
         <div class="tip">
-            <strong>ðŸŽ¯ Utiliser :</strong> https://www.projectworthyou.com/critical-path-css-generator/
+            <strong>🎯 Utiliser :</strong> https://www.projectworthyou.com/critical-path-css-generator/
         </div>
 
-        <h2>ðŸ“‹ Checklist de DÃ©ploiement</h2>
+        <h2>📋 Checklist de Déploiement</h2>
         <ul class="checklist">
             <li>Minifier tous les CSS et JS</li>
             <li>Optimiser toutes les images (< 100KB par image)</li>
             <li>Ajouter lazy loading aux images</li>
             <li>Configurer cache HTTP</li>
             <li>Activer Gzip sur le serveur</li>
-            <li>VÃ©rifier les liens (404 errors)</li>
+            <li>Vérifier les liens (404 errors)</li>
             <li>Tester sur Mobile avec DevTools</li>
             <li>Tester PageSpeed Insights (Google)</li>
-            <li>VÃ©rifier les scripts de sÃ©curitÃ©</li>
+            <li>Vérifier les scripts de sécurité</li>
             <li>Ajouter robots.txt et sitemap.xml</li>
         </ul>
 
-        <h2>ðŸ” Outils de Test</h2>
+        <h2>🔍 Outils de Test</h2>
         <div class="tip">
             <strong>Google PageSpeed Insights :</strong><br>
             https://pagespeed.web.dev/
@@ -203,7 +203,7 @@ if ('serviceWorker' in navigator) {
             https://www.webpagetest.org/
         </div>
 
-        <h2>ðŸ“Š Objectifs de Performance</h2>
+        <h2>📊 Objectifs de Performance</h2>
         <ul class="checklist">
             <li>First Contentful Paint (FCP) < 1.8s</li>
             <li>Largest Contentful Paint (LCP) < 2.5s</li>
@@ -211,28 +211,28 @@ if ('serviceWorker' in navigator) {
             <li>Interaction to Next Paint (INP) < 200ms</li>
         </ul>
 
-        <h2>ðŸ’¾ Structure des Fichiers Finaux</h2>
+        <h2>💾 Structure des Fichiers Finaux</h2>
         <pre>
 portfolio1/
-â”œâ”€â”€ index.html (main page)
-â”œâ”€â”€ project-car.html
-â”œâ”€â”€ project-drone.html
-â”œâ”€â”€ blog.html
-â”œâ”€â”€ gallery.html
-â”œâ”€â”€ service-worker.js (optional PWA)
-â”œâ”€â”€ assets/images/
-â”‚   â”œâ”€â”€ atttestation 1.jpg (optimisÃ©)
-â”‚   â”œâ”€â”€ atttestation 2.jpg
-â”‚   â””â”€â”€ ... (8 total)
-â”œâ”€â”€ css/ (optional)
-â”‚   â””â”€â”€ style.min.css
-â””â”€â”€ js/ (optional)
-    â””â”€â”€ script.min.js
+├── index.html (main page)
+├── project-car.html
+├── project-drone.html
+├── blog.html
+├── gallery.html
+├── service-worker.js (optional PWA)
+├── assets/images/
+│   ├── atttestation 1.jpg (optimisé)
+│   ├── atttestation 2.jpg
+│   └── ... (8 total)
+├── css/ (optional)
+│   └── style.min.css
+└── js/ (optional)
+    └── script.min.js
         </pre>
 
-        <h2>ðŸŽ‰ RÃ©sultat Final</h2>
+        <h2>🎉 Résultat Final</h2>
         <div class="tip">
-            <strong>âœ¨ Avec ces optimisations :</strong>
+            <strong>✨ Avec ces optimisations :</strong>
             <ul>
                 <li>Temps de chargement : ~1-2 secondes</li>
                 <li>Taille totale : &lt; 2 MB</li>
@@ -243,7 +243,7 @@ portfolio1/
         </div>
 
         <p style="margin-top: 3rem; text-align: center; color: #888;">
-            ðŸ“§ <strong>Questions ?</strong> Contactez via le formulaire du portfolio
+            📧 <strong>Questions ?</strong> Contactez via le formulaire du portfolio
         </p>
     </div>
 </body>
