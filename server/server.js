@@ -108,7 +108,8 @@ app.post('/api/chat', async (req, res) => {
 Voici les informations à connaître:
 - Nom: Sawadogo Moctar Hassane
 - Titre: Étudiant | Électronique & Informatique Industrielle
-- Email: contact@mhtech.bf
+- Email: sawadogosmhtech@gmail.com
+- Entreprise en projet: Yolsii Viima Tech
 - Téléphone: +226 76320088
 - GitHub: https://github.com/Hassane-sdg
 - LinkedIn: https://www.linkedin.com/in/moctar-hassane-sawadogo
@@ -191,7 +192,7 @@ app.get('/api/config', (req, res) => {
 app.listen(PORT, () => {
     console.log(`
 ╔════════════════════════════════════════╗
-║  🚀 Serveur Chatbot MHTech Démarré    ║
+║  🚀 Yolsii Viima Tech Chatbot lancé              ║
 ╠════════════════════════════════════════╣
 ║  URL: http://localhost:${PORT}${PORT === 3000 ? '  ' : '    '}║
 ║  API: http://localhost:${PORT}/api/chat ║

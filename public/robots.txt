@@ -1,4 +1,4 @@
-# MHTech Portfolio - Search Engine Robots Configuration
+# Yolsii Viima Tech - Search Engine Robots Configuration
 # This file tells search engines which pages to crawl and index
 
 User-agent: *

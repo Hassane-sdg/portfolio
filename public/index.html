@@ -344,45 +344,49 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 0 2rem;
+            gap: 0.65rem;
+            padding: 0 1rem;
         }
         
         .logo {
             font-family: 'Orbitron', sans-serif;
             font-weight: 900;
-            font-size: 1.6rem;
+            font-size: 1.2rem;
             background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
             text-shadow: var(--neon-glow);
-            position: relative;
-            padding-left: 45px;
             white-space: nowrap;
             line-height: 1;
-            overflow: visible;
+            flex-shrink: 0;
         }
-        
-        .logo::before {
-            content: 'MHTech';
-            position: absolute;
-            left: 0;
-            top: 0;
-            font-size: 0.8rem;
+
+        .logo-brand {
+            display: block;
             color: var(--accent-color);
+            font-size: 0.58rem;
+            letter-spacing: 0.06em;
             text-shadow: 0 0 10px var(--accent-color);
+        }
+
+        .logo-name {
+            display: block;
         }
         
         .nav-links {
             display: flex;
             align-items: center;
-            gap: 1.5rem;
+            flex: 1;
+            justify-content: flex-end;
+            min-width: 0;
+            gap: 0.5rem;
         }
 
         .nav-group {
             display: flex;
             align-items: center;
-            gap: 1.5rem;
+            gap: 0.4rem;
         }
 
         .nav-divider {
@@ -399,12 +403,18 @@
             font-weight: 500;
             transition: all 0.3s ease;
             position: relative;
-            padding: 0.5rem 0;
+            padding: 0.35rem 0.4rem;
+            border: 1px solid rgba(0, 255, 157, 0.18);
+            border-radius: 6px;
             font-family: 'Share Tech Mono', monospace;
+            font-size: 0.82rem;
+            white-space: nowrap;
         }
         
         .nav-link:hover {
             color: var(--primary-color);
+            border-color: rgba(0, 255, 157, 0.7);
+            background: rgba(0, 255, 157, 0.08);
         }
         
         .nav-link::after {
@@ -425,6 +435,8 @@
         
         .nav-link.active {
             color: var(--primary-color);
+            border-color: rgba(0, 255, 157, 0.55);
+            background: rgba(0, 255, 157, 0.06);
         }
         
         .nav-link.active::after {
@@ -451,7 +463,6 @@
             
             .logo {
                 font-size: 1.2rem;
-                padding-left: 28px;
             }
 
             .controls {
@@ -565,7 +576,6 @@
             
             .logo {
                 font-size: 1rem;
-                padding-left: 24px;
             }
             
             .controls {
@@ -980,6 +990,7 @@
         .flip-card {
             height: 300px;
             perspective: 1000px;
+            min-width: 0;
         }
         
         .flip-card-inner {
@@ -1010,6 +1021,7 @@
             background-color: var(--card-bg);
             border: 1px solid rgba(0, 255, 157, 0.3);
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
         }
         
         .flip-card-front {
@@ -1019,6 +1031,17 @@
         .flip-card-back {
             transform: rotateY(180deg);
             background: linear-gradient(135deg, rgba(0, 255, 157, 0.15), rgba(0, 136, 255, 0.15));
+            align-items: stretch;
+            justify-content: flex-start;
+            gap: 0.75rem;
+            padding: 1.25rem;
+        }
+
+        .flip-card-back h3 {
+            flex: 0 0 auto;
+            width: 100%;
+            font-size: 1.15rem;
+            overflow-wrap: anywhere;
         }
         
         .flip-card-front i {
@@ -1032,13 +1055,24 @@
             list-style-type: none;
             text-align: left;
             width: 100%;
+            min-height: 0;
+            flex: 1;
+            overflow-y: auto;
+            padding: 0.9rem 0.9rem 0.9rem 2.2rem;
+            border: 1px solid rgba(0, 255, 157, 0.28);
+            border-radius: 10px;
+            background: rgba(5, 5, 12, 0.48);
+            box-shadow: inset 0 0 18px rgba(0, 255, 157, 0.06);
+            scrollbar-color: rgba(0, 255, 157, 0.5) transparent;
         }
         
         .flip-card-back li {
-            margin-bottom: 0.8rem;
+            margin-bottom: 0.55rem;
             position: relative;
-            padding-left: 1.8rem;
-            font-size: 1.1rem;
+            padding-left: 0.1rem;
+            font-size: 0.95rem;
+            line-height: 1.4;
+            overflow-wrap: anywhere;
         }
         
         .flip-card-back li::before {
@@ -1165,6 +1199,14 @@
             font-size: 4.5rem;
             position: relative;
             overflow: hidden;
+        }
+
+        .project-cover {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
         
         .project-img::after {
@@ -1382,6 +1424,17 @@
             display: flex;
             flex-direction: column;
             gap: 2rem;
+        }
+
+        .contact-item a {
+            color: inherit;
+            overflow-wrap: anywhere;
+            text-decoration-color: var(--primary-color);
+            text-underline-offset: 0.2em;
+        }
+
+        .contact-item a:hover {
+            color: var(--primary-color);
         }
         
         .contact-item {
@@ -1808,12 +1861,19 @@
         }
         
         /* Responsive */
-        @media (max-width: 1200px) {
+        @media (min-width: 993px) and (max-width: 1200px) {
             .nav-links,
             .nav-group {
-                gap: 1rem;
+                gap: 0.55rem;
             }
 
+            .nav-link {
+                padding: 0.35rem 0.35rem;
+                font-size: 0.78rem;
+            }
+        }
+
+        @media (max-width: 1200px) {
             .hero h1 {
                 font-size: 3.2rem;
             }
@@ -1828,51 +1888,12 @@
             }
         }
 
-        @media (min-width: 993px) and (max-width: 1200px) {
-            .menu-btn {
-                display: block;
-            }
-
-            .nav-links {
-                position: fixed;
-                top: 80px;
-                left: 0;
-                width: 100%;
-                background-color: rgba(10, 10, 20, 0.95);
-                backdrop-filter: blur(10px);
-                flex-direction: column;
-                align-items: center;
-                padding: 2rem 0;
-                gap: 1.5rem;
-                transform: translateY(-100%);
-                opacity: 0;
-                visibility: hidden;
-                max-height: calc(100vh - 80px);
-                max-height: calc(100dvh - 80px);
-                overflow-y: auto;
-                transition: all 0.3s ease;
-                border-bottom: 1px solid rgba(0, 255, 157, 0.2);
-                z-index: 999;
-            }
-
-            .nav-group {
-                flex-direction: column;
-                gap: 1.5rem;
-            }
-
-            .nav-divider {
-                width: 55px;
-                height: 1px;
-            }
-
-            .nav-links.active {
-                transform: translateY(0);
-                opacity: 1;
-                visibility: visible;
-            }
-        }
-        
         @media (max-width: 992px) {
+            .nav-link {
+                padding: 0.5rem 0.75rem;
+                font-size: 1rem;
+            }
+
             .hero {
                 flex-direction: column;
                 text-align: center;
@@ -2054,7 +2075,10 @@
     <!-- Navigation -->
     <header>
         <nav aria-label="Navigation principale">
-            <div class="logo">Moctar Hassane</div>
+            <div class="logo">
+                <span class="logo-brand">Yolsii Viima Tech</span>
+                <span class="logo-name">Moctar Hassane</span>
+            </div>
             <div class="controls">
                 <div class="control-group">
                     <button class="control-btn" id="themeToggle" title="Basculer thème" data-abbr="THÈME"><i class="fas fa-sun"></i><i class="fas fa-moon"></i></button>
@@ -2093,7 +2117,7 @@
         <div class="hero-content">
             <h1>Sawadogo <span>Moctar Hassane</span></h1>
             <div class="hero-subtitle">Électronique & Informatique Industrielle</div>
-            <p class="hero-description">Étudiant en 3ᵉ année à l’IST, passionné par l’électronique embarquée, la domotique et les drones agricoles. Je développe des dashboards interactifs et me prépare à lancer MHTech, une entreprise technologique tournée vers l’avenir.</p>
+            <p class="hero-description">Étudiant en 3ᵉ année à l’IST, passionné par l’électronique embarquée, la domotique et les drones agricoles. Je développe des dashboards interactifs et me prépare à lancer Yolsii Viima Tech, une entreprise technologique tournée vers l’avenir.</p>
             <div style="display: flex; gap: 1.5rem; flex-wrap: wrap;">
                 <a href="#projects" class="cta-button">Voir mes projets</a>
                 <a href="#contact" class="cta-button" style="background: linear-gradient(90deg, var(--accent-color), var(--secondary-color));">Me contacter</a>
@@ -2129,7 +2153,7 @@
                 <p>Je m’appelle Sawadogo Moctar Hassane, étudiant burkinabè en 3ᵉ année d’Électronique et Informatique Industrielle à l’Institut Supérieur de Technologie (IST). Passionné par la technologie depuis mon plus jeune âge, je me spécialise dans l’électronique embarquée, la domotique et les systèmes automatisés.</p>
                 <p>Mon approche de l’apprentissage est avant tout pratique et orientée terrain. J’assimile mieux les concepts en expérimentant, en construisant des prototypes et en résolvant des problèmes concrets. Les explications visuelles, structurées et progressives sont celles qui me permettent de donner le meilleur de moi-même.</p>
                 <p>En parallèle de mes études, je suis membre du Bureau de l’Association pour l’Éducation Entrepreneuriale, Culturelle et Sportive de Bassinko. J’y participe activement à l’organisation d’événements communautaires et je m’investis pour transformer les idées des jeunes en projets entrepreneuriaux concrets.</p>
-                <p>À long terme, mon objectif est de fonder MHTech, une entreprise technologique dédiée à la domotique et à l’agriculture intelligente, avec l’ambition d’apporter des solutions innovantes et adaptées aux réalités du Burkina Faso et de l’Afrique de l’Ouest.</p>
+                <p>À long terme, mon objectif est de fonder Yolsii Viima Tech, une entreprise technologique dédiée à la domotique et à l’agriculture intelligente, avec l’ambition d’apporter des solutions innovantes et adaptées aux réalités du Burkina Faso et de l’Afrique de l’Ouest.</p>
             </div>
             <div class="about-stats">
                 <div class="stat-item">
@@ -2260,7 +2284,7 @@
                         <div class="project-inner">
                             <div class="project-front">
                                 <div class="project-img">
-                                    <i class="fas fa-snowflake"></i>
+                                    <img class="project-cover" src="assets/projects/Glaci%C3%A8re%20%C3%A0%20Modules%20peltier/61JNvPXjniL._AC_UF894%2C1000_QL80_.jpg" alt="Glacière à modules Peltier" loading="lazy">
                                 </div>
                                 <div class="project-info">
                                     <h3>Glacière à Modules Peltier</h3>
@@ -2291,7 +2315,7 @@
                         <div class="project-inner">
                             <div class="project-front">
                                 <div class="project-img">
-                                    <i class="fas fa-drone"></i>
+                                    <img class="project-cover" src="assets/projects/Drone%20agricole/agras-t60-farm-1-6.webp" alt="Drone agricole intelligent" loading="lazy">
                                 </div>
                                 <div class="project-info">
                                     <h3>Drone Agricole Intelligent</h3>
@@ -2332,7 +2356,7 @@
                         <div class="project-inner">
                             <div class="project-front">
                                 <div class="project-img">
-                                    <i class="fas fa-fish"></i>
+                                    <img class="project-cover" src="assets/projects/Pissiculture%20et%20jardinnage/Aquaponics-Intelligent-System-Agricultural-Planting-and-Breeding-Volume.webp" alt="Système de pisciculture et jardinage" loading="lazy">
                                 </div>
                                 <div class="project-info">
                                     <h3>Pisciculture + Jardinage Automatisé</h3>
@@ -2413,6 +2437,7 @@
                             <div class="project-front">
                                 <div class="project-img">
                                     <i class="fas fa-home"></i>
+                                    <img class="project-cover" src="assets/projects/Home%20garden/images.jpe" alt="Système de jardinage intelligent" loading="lazy">
                                 </div>
                                 <div class="project-info">
                                     <h3>Système Domotique Intelligent</h3>
@@ -2431,7 +2456,7 @@
                                     <img src="assets/projects/Home%20garden/images.jpe" alt="Système Home garden" loading="lazy">
                                 </div>
                                 <div class="project-back-text">
-                                    <h3>🏠 Maison Intelligente MHTech</h3>
+                                    <h3>🏠 Maison Intelligente Yolsii Viima Tech</h3>
                                     <p><strong>Défi:</strong> Créer une plateforme domotique modulaire et open-source.</p>
                                     <p><strong>Réalisation:</strong></p>
                                     <ul style="text-align:left; margin:0.5rem 0; padding-left:1.2rem;">
@@ -2452,6 +2477,7 @@
                             <div class="project-front">
                                 <div class="project-img">
                                     <i class="fas fa-seedling"></i>
+                                    <img class="project-cover" src="assets/projects/Hydroponie%20intelligente/images.jpe" alt="Installation hydroponique intelligente" loading="lazy">
                                 </div>
                                 <div class="project-info">
                                     <h3>Hydroponie Intelligente</h3>
@@ -2599,7 +2625,7 @@
                     • Obtenir un stage en électronique/domotique<br>
                     • Maîtriser Python avancé et SolidWorks<br>
                     <strong>Long terme :</strong><br>
-                    • Fonder MHTech pour révolutionner l'agriculture intelligente</p>
+                    • Fonder Yolsii Viima Tech pour révolutionner l'agriculture intelligente</p>
                 </div>
             </div>
 
@@ -2678,8 +2704,7 @@
                     </div>
                     <div>
                         <h4>Email</h4>
-                        <p>contact@mhtech.bf</p>
-                        <p>moctar.hassane@portfolio.dev</p>
+                        <p><a href="mailto:sawadogosmhtech@gmail.com">sawadogosmhtech@gmail.com</a></p>
                     </div>
                 </div>
                 <div class="contact-item">
@@ -2756,7 +2781,7 @@
         </div>
         <p class="copyright">© 2023 Sawadogo Moctar Hassane. Tous droits réservés. Portfolio d'un passionné d'électronique et d'informatique industrielle.</p>
         <div class="mhtech-badge">
-            <h4>Vision MHTech</h4>
+            <h4>Vision Yolsii Viima Tech</h4>
             <p>Révolutionner l'agriculture intelligente et la domotique en Afrique</p>
         </div>
     </footer>
@@ -2767,7 +2792,7 @@
             <div class="chatbot-header">
                 <div style="display:flex; align-items:center; gap:0.6rem;">
                     <div class="status-dot" id="chatStatus"></div>
-                    <h3>Assistant MHTech</h3>
+                    <h3>Assistant Yolsii Viima Tech</h3>
                 </div>
                 <div style="display:flex; align-items:center; gap:0.5rem;">
                     <button class="settings-btn" id="openChatSettings" title="Settings"><i class="fas fa-sliders-h"></i></button>
@@ -2801,7 +2826,7 @@
             </div>
             <div class="chatbot-messages" id="chatbotMessages">
                 <div class="message bot-message">
-                    Bonjour ! Je suis votre assistant MHTech. Comment puis-je vous renseigner sur mes compétences, projets ou ambitions ?
+                    Bonjour ! Je suis votre assistant Yolsii Viima Tech. Comment puis-je vous renseigner sur mes compétences, projets ou ambitions ?
                 </div>
             </div>
             <div class="chatbot-input">
@@ -3168,16 +3193,16 @@
             "smart home": "Smart home systems with ESP32, remote automation, intelligent control.",
             "drone": "🚁 Drone agricole : Agriculture de précision, délimitation parcelles, pulvérisation intelligente.",
             "agriculture": "🌾 Projets agricoles : drone de précision, automatisation, innovations technologiques.",
-            "mhtech": "🌟 MHTech : Future entreprise révolutionnant l'agriculture et domotique en Afrique.",
+            "yolsii viima tech": "🌟 Yolsii Viima Tech : future entreprise révolutionnant l'agriculture et la domotique en Afrique.",
             "stage": "📚 Recherche : Stage en électronique, domotique ou développement d'applications.",
             "apprentice": "Actuellement en 3ème année d'études, ouvert à collaborations et opportunités.",
-            "contact": "📧 Contact : email contact@mhtech.bf ou formulaire de contact du portfolio.",
-            "email": "contact@mhtech.bf - N'hésitez pas à me contacter !",
+            "contact": "📧 Contact : sawadogosmhtech@gmail.com ou formulaire de contact du portfolio.",
+            "email": "sawadogosmhtech@gmail.com - N'hésitez pas à me contacter !",
             "burkina": "🇧🇫 Burkina Faso, Bassinko, Ouagadougou. Fier de mon pays !",
             "ouagadougou": "📍 Bassinko, Ouagadougou - Burkina Faso.",
             "études": "🎓 3ème année Électronique & Informatique Industrielle à l'IST, Ouagadougou.",
             "ecole": "Institut des Sciences et Technologies (IST) - Formation en électronique & informatique.",
-            "ambition": "🎯 Créer MHTech pour apporter des solutions innovantes à l'agriculture et domotique.",
+            "ambition": "🎯 Créer Yolsii Viima Tech pour apporter des solutions innovantes à l'agriculture et à la domotique.",
             "future": "Futur entrepreneur en tech, focus agriculture intelligente et domotique.",
             "association": "🤝 Bureau association éducation entrepreneuriale, culturelle et sportive de Bassinko.",
             "merci": "De rien ! 😊 D'autres questions ?",
@@ -3215,7 +3240,7 @@
                 return bestMatch;
             }
             
-            const defaultResponse = "🤔 Je ne suis pas sûr... Posez-moi une question sur : projets 🚀, compétences 💻, domotique 🏠, drone 🚁, études 📚, contact 📧, ou MHTech 🌟 !";
+            const defaultResponse = "🤔 Je ne suis pas sûr... Posez-moi une question sur : projets 🚀, compétences 💻, domotique 🏠, drone 🚁, études 📚, contact 📧, ou Yolsii Viima Tech 🌟 !";
             messageCache.set(message, defaultResponse);
             return defaultResponse;
         }
@@ -3455,7 +3480,7 @@
                 reply_to: email,
                 subject: subject,
                 message: message,
-                to_email: 'contact@mhtech.bf'
+                to_email: 'sawadogosmhtech@gmail.com'
             };
             
             // Vérifier si EmailJS est disponible
@@ -3771,10 +3796,10 @@
         const cvData = {
             fullName: "Sawadogo Moctar Hassane",
             title: "Étudiant | Électronique & Informatique Industrielle",
-            email: "contact@mhtech.bf",
+            email: "sawadogosmhtech@gmail.com",
             phone: "+226 76320088",
             location: "Bassinko, Ouagadougou, Burkina Faso",
-            summary: "Étudiant passionné en 3ème année d'Électronique et Informatique Industrielle à l'IST, spécialisé dans l'électronique embarquée, la domotique, les drones agricoles et le développement d'applications innovantes. Futur fondateur de MHTech.",
+            summary: "Étudiant passionné en 3ème année d'Électronique et Informatique Industrielle à l'IST, spécialisé dans l'électronique embarquée, la domotique, les drones agricoles et le développement d'applications innovantes. Futur fondateur de Yolsii Viima Tech.",
             education: [
                 {
                     school: "Institut des Sciences et Technologies (IST)",
@@ -3897,7 +3922,7 @@
                 <strong>Intérêts:</strong> ${cvData.interests}</p>
 
                 <div style="margin-top: 30px; text-align: center; color: #999; font-size: 12px;">
-                    <p>Généré automatiquement depuis le portfolio MHTech | ${new Date().toLocaleDateString('fr-FR')}</p>
+                    <p>Généré automatiquement depuis le portfolio Yolsii Viima Tech | ${new Date().toLocaleDateString('fr-FR')}</p>
                 </div>
             `;
             
