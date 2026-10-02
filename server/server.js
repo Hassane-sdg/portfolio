@@ -103,11 +103,11 @@ app.post('/api/chat', async (req, res) => {
         }
 
         // Context pour que Gemini comprenne le contexte du portfolio
-        const systemPrompt = `Tu es l'assistant IA du portfolio de Sawadogo Moctar Hassane, développeur et étudiant en Électronique & Informatique Industrielle. 
+        const systemPrompt = `Tu es l'assistant IA du portfolio de Sawadogo Moctar Hassane, Ingénieur de Travaux en Électronique et Informatique Industrielle.
 
 Voici les informations à connaître:
 - Nom: Sawadogo Moctar Hassane
-- Titre: Étudiant | Électronique & Informatique Industrielle
+- Titre: Ingénieur de Travaux | Électronique & Informatique Industrielle
 - Email: sawadogosmhtech@gmail.com
 - Entreprise en projet: Yolsii Viima Tech
 - Téléphone: +226 76320088
@@ -122,10 +122,10 @@ Compétences principales:
 - Domaines: Robotique, Drones, IoT, Développement Web
 
 Projets réalisés:
-1. Drone Game - Jeu interactif avec contrôle du drone
-2. Car Project - Système de contrôle automobile
-3. Portfolio Personnel - Site Web moderne avec chatbot IA
-4. Système IOT - Intégration de capteurs et Arduino
+1. Robot Éboueur Téléopéré pour le nettoyage des caniveaux - projet de fin de formation associant mécanique, motorisation, électronique embarquée, capteurs, communication sans fil et supervision à distance
+2. Drone agricole intelligent
+3. Système de contrôle de voiture via ESP32
+4. Systèmes de pisciculture, jardinage automatisé et domotique
 
 Réponds en français de manière professionnelle et amicale. Si quelqu'un te demande des informations sur Moctar, fournis les détails du portfolio. Sois concis et utile.`;
 
