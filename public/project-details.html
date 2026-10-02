@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DÃ©tails du projet | MHTech</title>
+    <title>Détails du projet | MHTech</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;500;600&family=Share+Tech+Mono&display=swap" rel="stylesheet">
     <style>
@@ -29,15 +29,15 @@
     <header><a href="index.html#projects"><i class="fas fa-arrow-left"></i> Retour aux projets</a></header>
     <main>
         <section class="hero">
-            <h1 id="projectTitle">DÃ©tails du projet</h1>
+            <h1 id="projectTitle">Détails du projet</h1>
             <p id="projectSummary"></p>
         </section>
         <h2>Galerie du projet</h2>
         <div id="projectGallery" class="gallery"></div>
         <section class="panel">
-            <h2>PrÃ©sentation</h2>
+            <h2>Présentation</h2>
             <p id="projectDescription"></p>
-            <h2>Points clÃ©s</h2>
+            <h2>Points clés</h2>
             <ul id="projectFeatures"></ul>
         </section>
         <a class="btn" href="index.html#projects"><i class="fas fa-layer-group"></i> Voir les autres projets</a>
@@ -45,38 +45,38 @@
     <script>
         const projects = {
             glacier: {
-                title: 'GlaciÃ¨re Ã  modules Peltier',
-                summary: 'Prototype de refroidissement compact basÃ© sur lâ€™effet thermoÃ©lectrique.',
-                description: 'Ce projet explore une solution de refroidissement portable et la rÃ©gulation thermique par modules Peltier.',
-                features: ['Ã‰tude du refroidissement thermoÃ©lectrique', 'Prototypage Ã©lectronique', 'Gestion de la tempÃ©rature'],
-                images: ['assets/projects/GlaciÃ¨re%20Ã %20Modules%20peltier/61JNvPXjniL._AC_UF894%2C1000_QL80_.jpg', 'assets/projects/GlaciÃ¨re%20Ã %20Modules%20peltier/images%20%282%29.jpe']
+                title: 'Glacière à modules Peltier',
+                summary: 'Prototype de refroidissement compact basé sur l’effet thermoélectrique.',
+                description: 'Ce projet explore une solution de refroidissement portable et la régulation thermique par modules Peltier.',
+                features: ['Étude du refroidissement thermoélectrique', 'Prototypage électronique', 'Gestion de la température'],
+                images: ['assets/projects/Glaci%C3%A8re%20%C3%A0%20Modules%20peltier/61JNvPXjniL._AC_UF894%2C1000_QL80_.jpg', 'assets/projects/Glaci%C3%A8re%20%C3%A0%20Modules%20peltier/images%20%282%29.jpe']
             },
             pisciculture: {
-                title: 'Pisciculture et jardinage automatisÃ©s',
-                summary: 'SystÃ¨me intÃ©grÃ© pour associer Ã©levage, culture et gestion raisonnÃ©e de lâ€™eau.',
-                description: 'Une approche aquaponique orientÃ©e vers lâ€™autonomie alimentaire et lâ€™automatisation progressive des cycles de culture.',
-                features: ['Suivi des paramÃ¨tres', 'Irrigation automatisÃ©e', 'Optimisation de la consommation dâ€™eau'],
+                title: 'Pisciculture et jardinage automatisés',
+                summary: 'Système intégré pour associer élevage, culture et gestion raisonnée de l’eau.',
+                description: 'Une approche aquaponique orientée vers l’autonomie alimentaire et l’automatisation progressive des cycles de culture.',
+                features: ['Suivi des paramètres', 'Irrigation automatisée', 'Optimisation de la consommation d’eau'],
                 images: ['assets/projects/Pissiculture%20et%20jardinnage/71eJ765qW4L._AC_UF894%2C1000_QL80_.jpg', 'assets/projects/Pissiculture%20et%20jardinnage/Aquaponics-Intelligent-System-Agricultural-Planting-and-Breeding-Volume.webp', 'assets/projects/Pissiculture%20et%20jardinnage/images%20%281%29.jpe']
             },
             robot: {
-                title: 'Robot Ã©boueur automatisÃ©',
-                summary: 'Projet robotique en cours de dÃ©veloppement.',
-                description: 'Les informations visuelles et techniques dÃ©taillÃ©es de ce projet sont volontairement rÃ©servÃ©es pour le moment.',
-                features: ['Navigation autonome', 'Tri robotisÃ©', 'Projet sensible'],
+                title: 'Robot éboueur automatisé',
+                summary: 'Projet robotique en cours de développement.',
+                description: 'Les informations visuelles et techniques détaillées de ce projet sont volontairement réservées pour le moment.',
+                features: ['Navigation autonome', 'Tri robotisé', 'Projet sensible'],
                 images: []
             },
             home: {
                 title: 'Home garden intelligent',
-                summary: 'SystÃ¨me de jardinage assistÃ© par capteurs et automatisation.',
-                description: 'Le projet vise Ã  faciliter le suivi dâ€™un espace de culture et Ã  amÃ©liorer la rÃ©gularitÃ© de lâ€™arrosage.',
-                features: ['Suivi de culture', 'Gestion de lâ€™arrosage', 'Approche domotique'],
+                summary: 'Système de jardinage assisté par capteurs et automatisation.',
+                description: 'Le projet vise à faciliter le suivi d’un espace de culture et à améliorer la régularité de l’arrosage.',
+                features: ['Suivi de culture', 'Gestion de l’arrosage', 'Approche domotique'],
                 images: ['assets/projects/Home%20garden/images%20%281%29.jpe', 'assets/projects/Home%20garden/images.jpe']
             },
             hydroponie: {
                 title: 'Hydroponie intelligente',
-                summary: 'Culture hors-sol avec suivi des paramÃ¨tres et gestion optimisÃ©e des ressources.',
-                description: 'Une dÃ©marche dâ€™agriculture intelligente centrÃ©e sur la maÃ®trise de lâ€™eau et le suivi des conditions de culture.',
-                features: ['Culture hors-sol', 'Suivi des paramÃ¨tres', 'Irrigation optimisÃ©e'],
+                summary: 'Culture hors-sol avec suivi des paramètres et gestion optimisée des ressources.',
+                description: 'Une démarche d’agriculture intelligente centrée sur la maîtrise de l’eau et le suivi des conditions de culture.',
+                features: ['Culture hors-sol', 'Suivi des paramètres', 'Irrigation optimisée'],
                 images: ['assets/projects/Hydroponie%20intelligente/images%20%281%29.jpe', 'assets/projects/Hydroponie%20intelligente/images%20%282%29.jpe', 'assets/projects/Hydroponie%20intelligente/images.jpe']
             }
         };
@@ -91,8 +91,7 @@
         const gallery = document.getElementById('projectGallery');
         gallery.innerHTML = project.images.length
             ? project.images.map((src, index) => `<img src="${src}" alt="${project.title} - image ${index + 1}" loading="lazy">`).join('')
-            : '<div class="empty">Les images de ce projet sont momentanÃ©ment indisponibles.</div>';
+            : '<div class="empty">Les images de ce projet sont momentanément indisponibles.</div>';
     </script>
 </body>
 </html>
-
