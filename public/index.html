@@ -430,6 +430,13 @@
             gap: 0.4rem;
         }
 
+        .nav-contact-group {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 0.35rem;
+        }
+
         .nav-divider {
             width: 1px;
             height: 26px;
@@ -2031,6 +2038,10 @@
                 gap: 1.5rem;
             }
 
+            .nav-contact-group {
+                align-items: center;
+            }
+
             .nav-divider {
                 width: 55px;
                 height: 1px;
@@ -2155,7 +2166,8 @@
             display: flex;
             align-items: center;
             gap: 0.5rem;
-            margin: 2rem auto 0;
+            margin: 0;
+            justify-content: flex-end;
             width: 62px;
             max-width: calc(100vw - 5.5rem);
             padding: 0.4rem;
@@ -2288,7 +2300,24 @@
                     <a href="#certifs" class="nav-link">Certifs</a>
                     <a href="#cv" class="nav-link">CV</a>
                     <a href="#online" class="nav-link">En ligne</a>
-                    <a href="#contact" class="nav-link">Contact</a>
+                    <div class="nav-contact-group">
+                        <a href="#contact" class="nav-link">Contact</a>
+                        <div class="preferences-dock" id="preferencesDock">
+                            <button class="preferences-toggle" id="preferencesToggle" type="button" aria-label="Afficher les options de thème et de langue" aria-expanded="false" aria-controls="preferencesControls">
+                                <i class="fas fa-sliders-h" aria-hidden="true"></i>
+                            </button>
+                            <div class="controls" id="preferencesControls" aria-hidden="true" inert>
+                                <div class="control-group">
+                                    <button class="control-btn" id="themeToggle" type="button" title="Basculer le thème" aria-label="Basculer le thème" data-abbr="THÈME"><i class="fas fa-sun" aria-hidden="true"></i><i class="fas fa-moon" aria-hidden="true"></i></button>
+                                    <span class="control-label">THÈME</span>
+                                </div>
+                                <div class="control-group">
+                                    <button class="control-btn" id="langToggle" type="button" title="Basculer la langue" aria-label="Basculer la langue" data-abbr="LANG"><i class="fas fa-globe" aria-hidden="true"></i></button>
+                                    <span class="control-label">LANG</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -2930,21 +2959,6 @@
                     </div>
                     <button type="submit" class="cta-button" style="width: 100%; margin-top: 1rem;">Envoyer le message</button>
                 </form>
-            </div>
-        </div>
-        <div class="preferences-dock" id="preferencesDock">
-            <button class="preferences-toggle" id="preferencesToggle" type="button" aria-label="Afficher les options de thème et de langue" aria-expanded="false" aria-controls="preferencesControls">
-                <i class="fas fa-sliders-h" aria-hidden="true"></i>
-            </button>
-            <div class="controls" id="preferencesControls" aria-hidden="true" inert>
-                <div class="control-group">
-                    <button class="control-btn" id="themeToggle" type="button" title="Basculer le thème" aria-label="Basculer le thème" data-abbr="THÈME"><i class="fas fa-sun" aria-hidden="true"></i><i class="fas fa-moon" aria-hidden="true"></i></button>
-                    <span class="control-label">THÈME</span>
-                </div>
-                <div class="control-group">
-                    <button class="control-btn" id="langToggle" type="button" title="Basculer la langue" aria-label="Basculer la langue" data-abbr="LANG"><i class="fas fa-globe" aria-hidden="true"></i></button>
-                    <span class="control-label">LANG</span>
-                </div>
             </div>
         </div>
     </section>
