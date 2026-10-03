@@ -3,7 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Détails du projet | Yolsii Viima Tech</title>
+    <title>Projets de Moctar Hassane Sawadogo | MHTech</title>
+    <meta name="description" content="Fiches détaillées des projets de Moctar Hassane Sawadogo en électronique, prototypage, systèmes embarqués, robotique et agriculture intelligente.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://hassane-sdg.github.io/portfolio/project-details.html?project=glacier">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:title" content="Projets de Moctar Hassane Sawadogo">
+    <meta property="og:description" content="Fiches de projets en électronique, systèmes embarqués, robotique et agriculture intelligente.">
+    <meta property="og:image" content="https://hassane-sdg.github.io/portfolio/assets/images/IDPhoto_20241031_233053.jpg">
+    <meta property="og:url" content="https://hassane-sdg.github.io/portfolio/project-details.html?project=glacier">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Projets de Moctar Hassane Sawadogo">
+    <meta name="twitter:description" content="Projets d’électronique, de systèmes embarqués, de robotique et d’agriculture intelligente.">
+    <meta name="twitter:image" content="https://hassane-sdg.github.io/portfolio/assets/images/IDPhoto_20241031_233053.jpg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;500;600&family=Share+Tech+Mono&display=swap" rel="stylesheet">
     <style>
@@ -83,7 +96,18 @@
 
         const key = new URLSearchParams(window.location.search).get('project') || 'glacier';
         const project = projects[key] || projects.glacier;
-        document.title = `${project.title} | Yolsii Viima Tech`;
+        const canonicalUrl = new URL('https://hassane-sdg.github.io/portfolio/project-details.html');
+        canonicalUrl.searchParams.set('project', projects[key] ? key : 'glacier');
+        const pageTitle = `${project.title} | Moctar Hassane Sawadogo`;
+        const pageDescription = `${project.summary} Projet de Moctar Hassane Sawadogo, Ingénieur de Travaux en Électronique et Informatique Industrielle au Burkina Faso.`;
+        document.title = pageTitle;
+        document.querySelector('link[rel="canonical"]').href = canonicalUrl.href;
+        document.querySelector('meta[name="description"]').content = pageDescription;
+        document.querySelector('meta[property="og:title"]').content = pageTitle;
+        document.querySelector('meta[property="og:description"]').content = pageDescription;
+        document.querySelector('meta[property="og:url"]').content = canonicalUrl.href;
+        document.querySelector('meta[name="twitter:title"]').content = pageTitle;
+        document.querySelector('meta[name="twitter:description"]').content = pageDescription;
         document.getElementById('projectTitle').textContent = project.title;
         document.getElementById('projectSummary').textContent = project.summary;
         document.getElementById('projectDescription').textContent = project.description;

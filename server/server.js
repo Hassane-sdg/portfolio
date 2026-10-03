@@ -103,13 +103,13 @@ app.post('/api/chat', async (req, res) => {
         }
 
         // Context pour que Gemini comprenne le contexte du portfolio
-        const systemPrompt = `Tu es l'assistant IA du portfolio de Sawadogo Moctar Hassane, Ingénieur de Travaux en Électronique et Informatique Industrielle.
+        const systemPrompt = `Tu es l'assistant IA du portfolio de Moctar Hassane Sawadogo, Ingénieur de Travaux en Électronique et Informatique Industrielle.
 
 Voici les informations à connaître:
-- Nom: Sawadogo Moctar Hassane
+- Nom: Moctar Hassane Sawadogo
 - Titre: Ingénieur de Travaux | Électronique & Informatique Industrielle
 - Email: sawadogosmhtech@gmail.com
-- Entreprise en projet: Yolsii Viima Tech
+- Ambition entrepreneuriale: MHTech
 - Téléphone: +226 76320088
 - GitHub: https://github.com/Hassane-sdg
 - LinkedIn: https://www.linkedin.com/in/moctar-hassane-sawadogo
@@ -192,7 +192,7 @@ app.get('/api/config', (req, res) => {
 app.listen(PORT, () => {
     console.log(`
 ╔════════════════════════════════════════╗
-║  🚀 Yolsii Viima Tech Chatbot lancé              ║
+║  🚀 MHTech Chatbot lancé                         ║
 ╠════════════════════════════════════════╣
 ║  URL: http://localhost:${PORT}${PORT === 3000 ? '  ' : '    '}║
 ║  API: http://localhost:${PORT}/api/chat ║

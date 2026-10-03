@@ -1,25 +1,6 @@
-# Yolsii Viima Tech - Search Engine Robots Configuration
-# This file tells search engines which pages to crawl and index
+# Moctar Hassane Sawadogo - MHTech portfolio
 
 User-agent: *
-Allow: /
-Disallow: /optimization-guide.html
+Allow: /portfolio/
 
-# Google-specific
-User-agent: Googlebot
-Allow: /
-
-# Bing-specific
-User-agent: Bingbot
-Allow: /
-
-# Crawl-delay settings (in seconds)
-Crawl-delay: 1
-
-# Sitemaps
-Sitemap: https://moctar-portfolio.com/sitemap.xml
-Sitemap: https://moctar-portfolio.com/sitemap-blog.xml
-
-# Comments
-# Last updated: 2026-01-16
-# Portfolio: https://moctar-portfolio.com/
+Sitemap: https://hassane-sdg.github.io/portfolio/sitemap.xml
