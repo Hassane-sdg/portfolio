@@ -2150,13 +2150,12 @@
         }
 
         .preferences-dock {
-            position: fixed;
-            z-index: 1200;
-            left: max(0.75rem, env(safe-area-inset-left));
-            bottom: max(0.75rem, env(safe-area-inset-bottom));
+            position: relative;
+            z-index: 1;
             display: flex;
             align-items: center;
             gap: 0.5rem;
+            margin: 2rem auto 0;
             width: 62px;
             max-width: calc(100vw - 5.5rem);
             padding: 0.4rem;
@@ -2240,8 +2239,6 @@
 
         @media (max-width: 480px) {
             .preferences-dock {
-                left: max(0.5rem, env(safe-area-inset-left));
-                bottom: max(0.75rem, env(safe-area-inset-bottom));
                 max-width: calc(100vw - 5rem);
             }
 
@@ -2296,22 +2293,6 @@
             </div>
         </nav>
     </header>
-
-    <div class="preferences-dock" id="preferencesDock">
-        <button class="preferences-toggle" id="preferencesToggle" type="button" aria-label="Afficher les options de thème et de langue" aria-expanded="false" aria-controls="preferencesControls">
-            <i class="fas fa-sliders-h" aria-hidden="true"></i>
-        </button>
-        <div class="controls" id="preferencesControls" aria-hidden="true" inert>
-            <div class="control-group">
-                <button class="control-btn" id="themeToggle" type="button" title="Basculer le thème" aria-label="Basculer le thème" data-abbr="THÈME"><i class="fas fa-sun" aria-hidden="true"></i><i class="fas fa-moon" aria-hidden="true"></i></button>
-                <span class="control-label">THÈME</span>
-            </div>
-            <div class="control-group">
-                <button class="control-btn" id="langToggle" type="button" title="Basculer la langue" aria-label="Basculer la langue" data-abbr="LANG"><i class="fas fa-globe" aria-hidden="true"></i></button>
-                <span class="control-label">LANG</span>
-            </div>
-        </div>
-    </div>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
@@ -2949,6 +2930,21 @@
                     </div>
                     <button type="submit" class="cta-button" style="width: 100%; margin-top: 1rem;">Envoyer le message</button>
                 </form>
+            </div>
+        </div>
+        <div class="preferences-dock" id="preferencesDock">
+            <button class="preferences-toggle" id="preferencesToggle" type="button" aria-label="Afficher les options de thème et de langue" aria-expanded="false" aria-controls="preferencesControls">
+                <i class="fas fa-sliders-h" aria-hidden="true"></i>
+            </button>
+            <div class="controls" id="preferencesControls" aria-hidden="true" inert>
+                <div class="control-group">
+                    <button class="control-btn" id="themeToggle" type="button" title="Basculer le thème" aria-label="Basculer le thème" data-abbr="THÈME"><i class="fas fa-sun" aria-hidden="true"></i><i class="fas fa-moon" aria-hidden="true"></i></button>
+                    <span class="control-label">THÈME</span>
+                </div>
+                <div class="control-group">
+                    <button class="control-btn" id="langToggle" type="button" title="Basculer la langue" aria-label="Basculer la langue" data-abbr="LANG"><i class="fas fa-globe" aria-hidden="true"></i></button>
+                    <span class="control-label">LANG</span>
+                </div>
             </div>
         </div>
     </section>
