@@ -1,6 +1,6 @@
-# MHTech Portfolio
+# Yolsii Viima Tech Portfolio
 
-Portfolio personnel de Moctar Hassane Sawadogo, Ingénieur de Travaux en Électronique et Informatique Industrielle, avec ses projets de conception et son ambition MHTech.
+Portfolio personnel de Moctar Hassane Sawadogo, Ingénieur de Travaux en Électronique et Informatique Industrielle, avec ses projets de conception et son ambition Yolsii Viima Tech (« Vous faciliter la vie »).
 
 ## Structure
 

@@ -1,4 +1,4 @@
-# Moctar Hassane Sawadogo - MHTech portfolio
+# Moctar Hassane Sawadogo - Yolsii Viima Tech portfolio
 
 User-agent: *
 Allow: /portfolio/

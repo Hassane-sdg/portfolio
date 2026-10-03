@@ -1,14 +1,14 @@
 {
-  "name": "mhtech-chatbot-server",
+  "name": "yolsii-viima-tech-chatbot-server",
   "version": "1.0.0",
-  "description": "Serveur sécurisé pour le chatbot Gemini du portfolio MHTech",
+  "description": "Serveur sécurisé pour le chatbot Gemini du portfolio Yolsii Viima Tech",
   "main": "server/server.js",
   "scripts": {
     "start": "node server/server.js",
     "dev": "nodemon server/server.js"
   },
   "keywords": ["chatbot", "gemini", "portfolio", "api"],
-  "author": "MHTech",
+  "author": "Moctar Hassane Sawadogo",
   "license": "MIT",
   "dependencies": {
     "express": "^4.18.2",

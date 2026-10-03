@@ -109,7 +109,7 @@ Voici les informations à connaître:
 - Nom: Moctar Hassane Sawadogo
 - Titre: Ingénieur de Travaux | Électronique & Informatique Industrielle
 - Email: sawadogosmhtech@gmail.com
-- Ambition entrepreneuriale: MHTech
+- Ambition entrepreneuriale: Yolsii Viima Tech (« Vous faciliter la vie »)
 - Téléphone: +226 76320088
 - GitHub: https://github.com/Hassane-sdg
 - LinkedIn: https://www.linkedin.com/in/moctar-hassane-sawadogo
@@ -190,15 +190,10 @@ app.get('/api/config', (req, res) => {
 
 // Démarrage du serveur
 app.listen(PORT, () => {
-    console.log(`
-╔════════════════════════════════════════╗
-║  🚀 MHTech Chatbot lancé                         ║
-╠════════════════════════════════════════╣
-║  URL: http://localhost:${PORT}${PORT === 3000 ? '  ' : '    '}║
-║  API: http://localhost:${PORT}/api/chat ║
-║  Health: http://localhost:${PORT}/health ║
-╚════════════════════════════════════════╝
-    `);
+    console.log(`Yolsii Viima Tech chatbot lancé
+URL: http://localhost:${PORT}
+API: http://localhost:${PORT}/api/chat
+Health: http://localhost:${PORT}/health`);
 });
 
 // Gestion des erreurs non capturées
