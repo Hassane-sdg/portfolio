@@ -45,6 +45,10 @@ Le serveur exige `GEMINI_API_KEY` pour demarrer. Le fichier `.env` ne doit jamai
 - Le chatbot Gemini necessite un serveur Node separe (par exemple Render, Railway ou un VPS). GitHub Pages ne peut pas executer `server/server.js`.
 - Pour utiliser le chatbot depuis un domaine distant, definir `PUBLIC_ORIGIN` dans l'environnement du serveur et adapter l'URL API dans la page si necessaire.
 
+## Analytics et liens suivis
+
+Le site utilise GoatCounter pour les statistiques de campagnes sans cookies. Pour l'activer, configurez le code de site public dans `public/analytics-config.js`, puis publiez le site. Les liens UTM peuvent etre generes dans `public/utm-link-generator.html`. Consultez [la documentation analytics](docs/analytics.md) pour l'activation, la convention UTM, les statistiques et les informations de confidentialite.
+
 ## Commandes utiles
 
 ```bash
